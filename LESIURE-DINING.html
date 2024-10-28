@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <style>
+  .tab-pane {
+    background-color: white;
+    padding: 20px;
+  }
+  .tab-content {
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  .project {
+    margin: 10px;
+  }
+  .zoom-event {
+    border-radius: 10px;
+  }
+</style>
+
+<title>FUN ZONE| Lesiure & Dining</title>
+</head>
+
+<body style="background-color: #f0f0f0;">
+<!--       <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div> -->
+
+                                   <!-- Navbar of the Page Starts -->
+    <nav class="myNavbar" style="height: 108px;">
+      <div class="stickyNav" id="myNavbar">
+    <div class="brandsLogo">
+      <a class="navbar-brand" href="INDEX.html">
+        <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+      </div>
+      <div class="headr-tools">
+        <div class="navSupport">
+          <button class="openSearch" id="openSearchs">
+            <span class="fas fa-search"></span>
+          </button>
+          <div class="searchHere">
+            <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+          </div>
+
+        </div>
+        <div class="bookSearch"> 
+          <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+          <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+        </div>
+      </div>
+    <div class="myPages" id="navLinks" style="background-color:#2b589b">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+</nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+      <!------------------------- End of Navbar ----------------------------->
+
+  <div class="heading">
+    <h1><p>Leisure & Dining</p></h1>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 ">
+        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><img class="icon1" src="assets/images/lesiure-dinning/KFC/KFC_logo.png" width="100px" height="100px"></a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><img class="icon1" src="assets/images/lesiure-dinning/MCDONALDS/McDonald_s logo.png" width="100px" height="100px"></a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><img class="icon1" src="assets/images/lesiure-dinning/BURGER KING/Burger_King_logo_(1999).png" width="100px" height="100px"></a>
+          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false"><img class="icon1" src="assets/images/lesiure-dinning/PIZZA HUT/Pizza_Hut_logo.png" width="100px" height="100px"></a>
+          <a class="nav-item nav-link" id="nav-hardees-tab" data-toggle="tab" href="#nav-hardees" role="tab" aria-controls="nav-hardees" aria-selected="false"><img class="icon1" src="assets/images/lesiure-dinning/HARDEES/Hardee_brand_logo.svg.png" width="100px" height="100px"></a>
+          <a class="nav-item nav-link" id="nav-pizzahut-tab" data-toggle="tab" href="#nav-pizzahut" role="tab" aria-controls="nav-pizzahut" aria-selected="false"><img class="icon1" src="assets/images/lesiure-dinning/DOMINOS/Dominos_pizza_logo.png" width="100px" height="100px"></a>
+          <a class="nav-item nav-link" id="nav-subway-tab" data-toggle="tab" href="#nav-subway" role="tab" aria-controls="nav-subway" aria-selected="false"><img class="icon1" src="assets/images/lesiure-dinning/SUBWAY/subway-photo-logo-4300.png" width="100px" height="100px"></a>
+          
+        </div>
+      </nav>
+      <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <h3>OUTLET DETAILS</h3>
+          <br>
+          <br>
+          <p>Timings : 9am-11pm</p><br>
+          <br>
+          <p>KFC was founded by Colonel Harland Sanders, an entrepreneur who began selling fried chicken from his roadside restaurant in Corbin, Kentucky during the Great Depression.</p>
+          <hr>
+          <h3>MENU</h3>
+
+          <section class="sec1">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                  <div class="project">
+
+                    <div class="zoom-event">
+                      <div class="event-photo">
+                        <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/KFC/1.png"alt="" width="300px" height="250px">
+                      </div>
+                      <div class="event-text">
+                        <h5>Bucket of brosts</h5>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                  <div class="project">
+                    <div class="zoom-event">
+                      <div class="event-photo">
+                        <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/KFC/2.png" alt="" width="300px" height="250px">
+                      </div>
+                      <div class="event-text">
+                        <h5>Regular Deal</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                  <div class="project">
+                    <div class="zoom-event">
+                      <div class="event-photo">
+                        <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/KFC/3.png" alt="" width="300px" height="250px">
+                      </div>
+                      <div class="event-text">
+                        <h5>Combo Deal</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                  <div class="project">
+                    <div class="zoom-event">
+                      <div class="event-photo">
+                        <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/KFC/4.png" alt="" width="300px" height="250px">
+                      </div>
+                      <div class="event-text">
+                        <h5>Meal Box</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                  <div class="project">
+                    <div class="zoom-event">
+                      <div class="event-photo">
+                        <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/KFC/6.png"alt="" width="300px" height="250px">
+                      </div>
+                      <div class="event-text">
+                        <h5>Family Combo</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                  <div class="project">
+                    <div class="zoom-event">
+                      <div class="event-photo">
+                        <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/KFC/5.png" alt="" width="300px" height="250px">
+                      </div>
+                      <div class="event-text">
+                        <h5>Family Festival</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+         <h3>OUTLET DETAILS</h3>
+         <br>
+         <br>
+         <p>Timings : 9am-11pm</p><br>
+         <br>
+         <p>McDonald's Corporation is an American fast food company, founded in 1940 as a restaurant operated by Richard and Maurice McDonald, in San Bernardino, California, United States.</p>
+         <hr>
+         <h3>MENU</h3>
+
+         <section class="sec1">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                <div class="project">
+                  <div class="zoom-event">
+                    <div class="event-photo">
+                      <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/MCDONALDS/1.png" alt="" width="300px" height="250px">
+                    </div>
+                    <div class="event-text">
+                      <h5>Mini McArabia</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                <div class="project">
+                  <div class="zoom-event">
+                    <div class="event-photo">
+                      <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/MCDONALDS/2.png" alt="" width="300px" height="250px">
+                    </div>
+                    <div class="event-text">
+                      <h5>Mini Mc Royale</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                <div class="project">>
+                  <div class="zoom-event">
+                    <div class="event-photo">
+                      <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/MCDONALDS/3.png" alt="" width="300px" height="250px">
+                    </div>
+                    <div class="event-text">
+                      <h5>Chicken Chapli Burger</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+                <div class="project">
+                 <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/MCDONALDS/4.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Bun Kabab</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/MCDONALDS/5.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Spicy Chicken Burger with Cheese</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/MCDONALDS/6.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Double Chapli Burger</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+       <h3>OUTLET DETAILS</h3>
+       <br>
+       <br>
+       <p>Timings : 9am-11pm</p><br>
+       <br>
+       <p>Burger King is an American multinational chain of hamburger fast food restaurants. Headquartered in Miami-Dade County, Florida, the company was founded in 1953 as Insta-Burger King, a Jacksonville, Florida–based restaurant chain. </p>
+       <hr>
+       <h3>MENU</h3>
+
+       <section class="sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/BURGER KING/1.png"alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Best Sellers</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/BURGER KING/2.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Family Members</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/BURGER KING/3.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Flame Grilled Burgers</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/BURGER KING/4.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Chicken and Fish</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/BURGER KING/5.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>Sides</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+              <div class="project">
+                <div class="zoom-event">
+                  <div class="event-photo">
+                    <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/BURGER KING/6.png" alt="" width="300px" height="250px">
+                  </div>
+                  <div class="event-text">
+                    <h5>King Jr.</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+     <h3>OUTLET DETAILS</h3>
+     <br>
+     <br>
+     <p>Timings : 9am-11pm</p><br>
+     <br>
+     <p>Pizza Hut is an American restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. It provides pizza and other Italian-American dishes, including pasta, side dishes and desserts.</p>
+     <hr>
+     <h3>MENU</h3>
+     <section class="sec1">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+            <div class="project">
+              <div class="zoom-event">
+                <div class="event-photo">
+                  <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/PIZZA HUT/1.jpg" alt="" width="300px" height="250px">
+                </div>
+                <div class="event-text">
+                  <h5>Chicken Supreme</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+            <div class="project">
+              <div class="zoom-event">
+                <div class="event-photo">
+                  <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/PIZZA HUT/2.jpg" alt="" width="300px" height="250px">
+                </div>
+                <div class="event-text">
+                  <h5>Chicken Tikka</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+            <div class="project">
+              <div class="zoom-event">
+                <div class="event-photo">
+                  <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/PIZZA HUT/3.jpg" alt="" width="300px" height="250px">
+                </div>
+                <div class="event-text">
+                  <h5>Faj. Sicilian</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+            <div class="project">
+              <div class="zoom-event">
+                <div class="event-photo">
+                  <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/PIZZA HUT/4.jpg" alt="" width="300px" height="250px">
+                </div>
+                <div class="event-text">
+                  <h5>Chicken Fajita</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+            <div class="project">
+              <div class="zoom-event">
+                <div class="event-photo">
+                  <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/PIZZA HUT/5.jpg" alt="" width="300px" height="250px">
+                </div>
+                <div class="event-text">
+                  <h5>Bihari</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+            <div class="project">
+              <div class="zoom-event">
+                <div class="event-photo">
+                  <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/PIZZA HUT/6.jpg" alt="" width="300px" height="250px">
+                </div>
+                <div class="event-text">
+                  <h5>Afghani Tikka</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="tab-pane fade" id="nav-hardees" role="tabpanel" aria-labelledby="nav-hardees-tab">
+   <h3>OUTLET DETAILS</h3>
+   <br>
+   <br>
+   <p>Timings : 9am-11pm</p><br>
+   <br>
+   <p>Hardee's Restaurants LLC, is an American fast-food restaurant chain operated by CKE Restaurants Holdings, Inc. with locations primarily in the Southern and Midwestern United States. The company has evolved through several corporate ownerships since its establishment in 1960 in North Carolina. </p>
+   <hr>
+   <h3>MENU</h3>
+
+   <section class="sec1">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+          <div class="project">
+            <div class="zoom-event">
+              <div class="event-photo">
+                <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/HARDEES/h1.jpg" alt="" width="300px" height="250px">
+              </div>
+              <div class="event-text">
+                <h5>Famous Star With Cheese</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+          <div class="project">
+            <div class="zoom-event">
+              <div class="event-photo">
+                <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/HARDEES/h2.jpg"alt="" width="300px" height="250px">
+              </div>
+              <div class="event-text">
+                <h5>Ranch Angus</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+          <div class="project">
+            <div class="zoom-event">
+              <div class="event-photo">
+                <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/HARDEES/h3.jpg" alt="" width="300px" height="250px">
+              </div>
+              <div class="event-text">
+                <h5>Super star with Cheese</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+          <div class="project">
+            <div class="zoom-event">
+              <div class="event-photo">
+                <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/HARDEES/h4.jpg" alt="" width="300px" height="250px">
+              </div>
+              <div class="event-text">
+                <h5>Cheese with Chicken</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+          <div class="project">
+            <div class="zoom-event">
+              <div class="event-photo">
+                <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/HARDEES/h5.jpg" alt="" width="300px" height="250px">
+              </div>
+              <div class="event-text">
+                <h5>Double Wetren Bacon</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+          <div class="project">
+            <div class="zoom-event">
+              <div class="event-photo">
+                <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/HARDEES/h6.jpg" alt="" width="300px" height="250px">
+              </div>
+              <div class="event-text">
+                <h5>The Hardee</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="tab-pane fade" id="nav-pizzahut" role="tabpanel" aria-labelledby="nav-pizzahut-tab">
+ <h3>OUTLET DETAILS</h3>
+ <br>
+ <br>
+ <p>Timings : 9am-11pm</p><br>
+ <br>
+ <p>Domino's Pizza, Inc., branded as Domino's, is an American multinational pizza restaurant chain founded in 1960. The corporation is Delaware domiciled and headquartered at the Domino's Farms Office Park in Ann Arbor, Michigan.</p>
+ <hr>
+ <h3>MENU</h3>
+
+ <section class="sec1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/DOMINOS/dp1.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Bucket of brosts</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/DOMINOS/dp2.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Creamy Mughlai</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/DOMINOS/dp3.jpg" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Creamy Peri Peri</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/DOMINOS/dp4.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Tax Max</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/DOMINOS/dp5.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Legend Ranch</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/DOMINOS/dp6.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Chicken Tikka</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="tab-pane fade" id="nav-subway" role="tabpanel" aria-labelledby="nav-subway-tab">
+ <h3>OUTLET DETAILS</h3>
+ <br>
+ <br>
+ <p>Timings : 9am-11pm</p><br>
+ <br>
+ <p>Subway is an American fast food restaurant franchise that primarily sells submarine sandwiches, salads and beverages. It was founded by the 17 year old Fred DeLuca and financed by Peter Buck in 1965 as Pete's Super Submarines in Bridgeport, Connecticut.</p>
+ <hr>
+ <h3>MENU</h3>
+ <section class="sec1">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/SUBWAY/sb1.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>BBQ Chicken</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/SUBWAY/sb2.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Chicken Fajita</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/SUBWAY/sb3.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Chicken Tandoor</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/SUBWAY/sb4.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Chicken Tikka</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/SUBWAY/sb5.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Italian B.M.T</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 project-area">
+        <div class="project">
+          <div class="zoom-event">
+            <div class="event-photo">
+              <img class="pro-img img-responsive" src="assets/images/lesiure-dinning/SUBWAY/sb6.jpg" alt="" width="300px" height="250px">
+            </div>
+            <div class="event-text">
+              <h5>Oven Roasted Chicken</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+ <!-- Footer -->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+        <!-- Content -->
+        <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+       </li>
+        <li>
+        <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+       </li>
+       
+       </ul>
+     </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+     <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+          </li>
+       
+       <li>
+        <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+<div class="footerPages footer-icons">
+        <!-- Social buttons -->
+        <!-- Facebook -->
+               <h5 class="text-uppercase txt-s">FOLLOW</h5>
+        <span class="icon-container">
+        <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+          <i class="fab fa-facebook iconTrans"></i>
+        </a>
+      </span>
+
+       <span class="icon-container">
+        <!-- Twitter -->
+        <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+          <i class="fab fa-twitter iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Google +-->
+        <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+          <i class="fab fa-instagram iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Dribbble -->
+        <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+          <i class="fab fa-youtube iconTrans"></i>
+        </a>
+        </span>
+
+    </div>
+<div class="footerPages">
+
+     <div class="myNote">
+
+        <!-- Links -->
+        <h5>NOTICE</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="txt-1">
+              Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+            </p>
+          </li>
+       <li>
+        <p class="txt-1">
+        Theme park tel: +44 5639 0011
+Fax: +603 5639 0022
+Email: ask@funzone.com.my</p>
+       </li>
+       <li>
+        <p class="txt-1">
+        Open Wed – Mon: 10:00am till 6:00pm</p>
+       </li>
+        <li>
+        <p class="txt-1">
+        Closed every Friday, except on Country's Public holidays</p>
+       </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+</div>
+
+  <!-- Footer Links -->
+<hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+     <img src="assets/images/ICONS/American-Express-icon.png">
+     <img src="assets/images/ICONS/Discover-icon.png">
+   </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<script src="assets/js/my-script.js"></script>
+    </body>
+    </html>

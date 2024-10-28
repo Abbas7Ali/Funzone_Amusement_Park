@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>FUN ZONE | Business Opportunities</title>
+  <style>
+  body {
+    background: #f0f0f0;
+  }
+  body h2 {
+    text-align: center;
+  }
+  body button {
+    margin: 2px;
+  }
+
+  .mySigned {
+    width: 350px;
+    float: right;
+    background-color: #ea793f;;
+  }
+  .leftData {
+    text-align: justify;
+  }
+  .firstWrapper {
+    background: rgba(234, 121, 63, 0.5) url(assets/images/businessOp/bg-abc.jpg);
+    background-position: right;
+    background-size: cover;
+    background-blend-mode: color;
+  }
+  .firstWrapper, .secondWrapper, .thirdWrapper, .fourthWrapper, .fifthWrapper{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+  .thirdWrapper, .fifthWrapper {
+    background: rgba(234, 121, 63, 0.5) url(assets/images/stars.png);
+  }
+  .secondWrapper, .fourthWrapper {
+    background: rgba(43, 88, 155, 0.5) url(assets/images/stars.png);
+  }
+  .mycontainer {
+    width: 100%;
+  }
+  .text-danger {
+    color: #aa4917!important;
+  }
+  .iconParent {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    text-align: center;
+  }
+  @media screen and (max-width: 434px){
+    .mySigned{
+      width: 99%;
+    }
+  }
+</style>
+
+</head>
+<body>
+      <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!------------------ Navbar of the Page Starts ------------------->
+  <nav class="myNavbar" style="height: 108px;">
+    <div class="stickyNav" id="myNavbar">
+      <div class="brandsLogo">
+        <a class="navbar-brand" href="INDEX.html">
+          <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+        </div>
+        <div class="headr-tools">
+          <div class="navSupport">
+            <button class="openSearch" id="openSearchs">
+              <span class="fas fa-search"></span>
+            </button>
+            <div class="searchHere">
+              <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+            </div>
+
+          </div>
+          <div class="bookSearch"> 
+            <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+            <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+          </div>
+        </div>
+        <div class="myPages" id="navLinks" style="background-color:#2b589b">
+         <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+         <ul class="navItems" id="mySidenav">
+          <button class="navClose" onclick="closeNav()">&times;</button>
+          <li class="dropContain">
+            <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+            <ul class="dropContent">
+              <li><a href="packages.html">PACKAGES</a></li>
+              <li><a href="show.html">SHOWS</a></li>
+              <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+              <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+              <li><a href="cabana.html">CABANA</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+          </li>
+
+          <li>
+            <a href="Promotions.html">PROMOTION</a>
+          </li>
+          <li>
+            <a href="BUSINESS-OPPORTUNITIES.html" >BUSINESS OPPORTUNITIES</a>
+          </li>
+        </ul>    
+      </div>
+    </div>
+  </nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+  <!------------------------- End of Navbar ----------------------------->
+
+  <div class="mycontainer">
+    <div class="firstWrapper">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="leftData">
+            <h1>We'll Show you to <br> <span class="text-danger">The way to Success</span></h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
+            </p>
+            <ul>
+              <li>No Obligation <span>100% Free</span></li>
+              <li>Fast Easy Approval</li>
+              <li>Nationwide Longer Network</li>
+            </ul>
+            <button class="btn btn-success p-2 ml-3 w-25">Watch Demo</button>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="mySigned">
+            <div class="row">
+              <div class="col">
+                <div>
+                  <div class="card-body" style="background-color:#ea793f;">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Company Name:</label>
+                        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Comapany Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Company Email Adress:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Comapny Details</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>  
+                      <div class="form-group">
+                        <label for="exampleFormControlFile1">Company Proposal:</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      </div>
+                      <div class="col-auto">
+                        <button type="button" class="btn trigger btn btn-primary mb-2" data-toggle="modal" data-target="#exampleModal"> Submit Application </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header border-none"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+                              <div class="modal-body p-0">
+                                <div class="crop"> <img src="assets/Resources/noun_approved document_2349374.svg" width="100%" alt=""> </div>
+                                <h2>Application Submitted!</h2>
+                              <p class="text-center"><small class="text-dark"><strong>Thank you for submitting your application. Our operation department will contact you soon. So stay tuned!</strong></small></p>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="secondWrapper">
+      <div style="width: 100%;">
+        <h2>Steps to Start a Business</h2>
+
+     </div>
+     <div class="row">
+      <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div>
+          <div class="iconParent">
+            <h1>1</h1>
+          </div>
+          <h2 class="text-danger">Fill the Form</h2>
+          <p>
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+         </p>
+       </div>
+     </div>
+     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+      <div>
+        <div class="iconParent">
+          <h1>2</h1>
+        </div>
+        <h2 class="text-danger">Submit the Form</h2>
+        <p>
+         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+       </p>
+     </div>
+   </div>
+   <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+    <div>
+      <div class="iconParent">
+        <h1>3</h1>
+      </div>
+      <h2 class="text-danger">We will contact with you.</h2>
+      <p>
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+     </p>
+   </div>
+ </div>
+</div>
+</div>
+
+<div class="thirdWrapper">
+  <div style="width:100%; text-align: center;">
+    <h2>Start Your Own Business</h2>
+    <p>
+     It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+   </p>
+ </div>
+ <div class="row">
+  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <div>
+      <img src="assets/images/businessOp/startups.jpg" width="100%" height="100%">
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <div>
+     <p>
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
+     </p>
+     <p>
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as 
+     </p>
+
+     <button class="btn btn-primary m-2 p-2 w-25">Get Started</button>
+   </div>
+ </div>
+</div>
+</div>
+<div class="fourthWrapper">
+  <div class="row">
+    <div class="col-12">
+      <div>
+        <h2>Simple Way With Big Opportunity</h2>
+        <p>
+         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+       </p>
+     </div>
+   </div>
+   <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <div>
+     <p>
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
+     </p>
+     <p>
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as 
+     </p>
+
+     <button class="btn btn-primary p-2 w-25">Get Started</button>
+   </div>
+ </div>
+ <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+   <div>
+    <img src="assets/images/businessOp/pexels.jpg" width="100%" height="100%">
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer -->
+
+  <footer class="pageFooter">
+
+    <!-- Footer Links -->
+
+    <div class="footer-container">
+
+      <!-- Content -->
+      <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+            </li>
+            <li>
+              <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+            </li>
+            <li>
+              <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+            </li>
+            <li>
+              <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+            </li>
+
+          </ul>
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="footerPages">
+
+          <!-- Links -->
+          <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+              </li>
+              <li>
+                <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+              </li>
+              <li>
+                <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="footerPages">
+
+            <!-- Links -->
+            <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+                </li>
+
+                <li>
+                  <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+                </li>
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="footerPages footer-icons">
+              <!-- Social buttons -->
+              <!-- Facebook -->
+              <h5 class="text-uppercase txt-s">FOLLOW</h5>
+              <span class="icon-container">
+                <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+                  <i class="fab fa-facebook iconTrans"></i>
+                </a>
+              </span>
+
+              <span class="icon-container">
+                <!-- Twitter -->
+                <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+                  <i class="fab fa-twitter iconTrans"></i>
+                </a>
+              </span>
+              <span class="icon-container">
+                <!-- Google +-->
+                <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+                  <i class="fab fa-instagram iconTrans"></i>
+                </a>
+              </span>
+              <span class="icon-container">
+                <!-- Dribbble -->
+                <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+                  <i class="fab fa-youtube iconTrans"></i>
+                </a>
+              </span>
+
+            </div>
+            <div class="footerPages">
+
+             <div class="myNote">
+
+              <!-- Links -->
+              <h5>NOTICE</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <p class="txt-1">
+                    Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+                  </p>
+                </li>
+                <li>
+                  <p class="txt-1">
+                    Theme park tel: +44 5639 0011
+                    Fax: +603 5639 0022
+                  Email: ask@funzone.com.my</p>
+                </li>
+                <li>
+                  <p class="txt-1">
+                  Open Wed – Mon: 10:00am till 6:00pm</p>
+                </li>
+                <li>
+                  <p class="txt-1">
+                  Closed every Friday, except on Country's Public holidays</p>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <!-- Grid row -->
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+    <img src="assets/images/ICONS/American-Express-icon.png">
+    <img src="assets/images/ICONS/Discover-icon.png">
+  </div>
+</div>
+<!-- Copyright -->
+
+</footer>
+
+<script src="assets/js/my-script.js"></script>
+</body>
+</html>

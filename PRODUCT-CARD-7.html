@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>FUN ZONE | COVE WATERPARK™ </title>
+</head>
+<body style="background-color: #f0f0f0;">
+      <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+                     <!------------------ Navbar of the Page Starts ------------------->
+  <nav class="myNavbar" style="height: 108px;">
+      <div class="stickyNav" id="myNavbar">
+    <div class="brandsLogo">
+      <a class="navbar-brand" href="INDEX.html">
+        <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+      </div>
+      <div class="headr-tools">
+        <div class="navSupport">
+          <button class="openSearch" id="openSearchs">
+            <span class="fas fa-search"></span>
+          </button>
+          <div class="searchHere">
+            <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+          </div>
+
+        </div>
+        <div class="bookSearch"> 
+          <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+          <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+        </div>
+      </div>
+    <div class="myPages" id="navLinks" style="background-color:#2b589b">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+</nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+      <!------------------------- End of Navbar ----------------------------->
+
+
+   <div class="hero-image-container">
+      <div class="para-img7">
+      <div class="img-con">
+      </div>
+    </div>
+    <div class="wave-img">
+     <div class="wave-border"></div>
+   </div>
+   </div>
+   
+
+  <div class="new-container">
+     <div class="top-contents">
+      <div class="contents-wrapper">
+    <div class="product-title">
+      <p><b>Adventure</b></p>
+      <h1><span class="hero-description" id="hero-title"><strong>ADVENTURE</strong> <small>COVE WATERPARK™ </small></span></h1>
+    </div>
+    <div class="">
+      <p>Southeast Asia’s first hydro-magnetic coaster isn’t our only claim to fame!
+      </p>
+      <p>From zooming down high-speed water slides to drifting lazily down a winding river; snorkeling with 20,000 marine fish to wading with friendly rays in the shallows. There’s a wave of fun waiting for the thrill-seeker and nature lover in you, here at Adventure Cove Waterpark.</p>
+      <p>So get your goggles ready!
+      </p>  
+      <hr>
+    </div>
+  </div>
+    <div class="timing-wrapper">
+      <div>
+        <p><b>TRIP ADVISOR RATING</b></p>
+        <div class="ratings">
+          <span>
+            <i class="fas fa-glasses"></i>
+          </span>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+        </div>
+        <p>Based on 2470 reviews</p>
+      </div>
+      <p><b>Opening Hours</b></p>
+     <p>Reopening on 14 June 2021</p>
+     <div>
+       <p><i class=" far fa-clock " style="font-size:24px"></i>  Sat- Sun: 10am - 5pm</p>
+       <p>Staggered ride operation</p>
+     </div>
+    
+    </div>
+  </div>
+<!-------------------------------------->
+
+<section class="team">
+  <div class="ticket-wrappers">
+    <h3>Ticket options <div>3</div></h3>
+  <div class="ticket-container">
+    <div class="ticket-header">
+      <div class="ticket-title">
+        <p>The Challenge Package 2Skydive -Locals Norm Time</p>
+      </div>
+      <div class="ticket-content">
+        <div class="ticket-price">
+          <small><b>PER TICKET</b></small><br>
+          <h2><span>$</span>89<small><sup>.00</sup></small></h2>
+        </div>
+        <div class="ticket-add">
+          <input type="button" name="" id="remove-person" value="-" onclick="countDown()">
+          <input type="text" name="quantity" id="quantity-person" value="0" size="4" maxlength="4">
+          <input type="button" name="" id="add-person" value="+" onclick="countUp()">
+        </div>
+      </div>
+      <div class="ticket-range">
+        <p>You can only add up to 8 tickets at a time.</p>
+      </div>
+    </div>
+    <div class="ticket-body">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+    <div class="ticket-container">
+    <div class="ticket-header">
+      <div class="ticket-title">
+        <p>The Challenge Package 2Skydive -Locals Norm Time</p>
+      </div>
+      <div class="ticket-content">
+        <div class="ticket-price">
+          <small><b>PER TICKET</b></small><br>
+          <h2><span>$</span>89<small><sup>.00</sup></small></h2>
+        </div>
+        <div class="ticket-add">
+          <input type="button" name="" id="remove-person" value="-" onclick="countDown()">
+          <input type="text" name="quantity" id="quantity-person" value="0" size="4" maxlength="4">
+          <input type="button" name="" id="add-person" value="+" onclick="countUp()">
+        </div>
+      </div>
+      <div class="ticket-range">
+        <p>You can only add up to 8 tickets at a time.</p>
+      </div>
+    </div>
+    <div class="ticket-body">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+    <div class="ticket-container">
+    <div class="ticket-header">
+      <div class="ticket-title">
+        <p>The Challenge Package 2Skydive -Locals Norm Time</p>
+      </div>
+      <div class="ticket-content">
+        <div class="ticket-price">
+          <small><b>PER TICKET</b></small><br>
+          <h2><span>$</span>89<small><sup>.00</sup></small></h2>
+        </div>
+        <div class="ticket-add">
+          <input type="button" name="" id="remove-person" value="-" onclick="countDown()">
+          <input type="text" name="quantity" id="quantity-person" value="0" size="4" maxlength="4">
+          <input type="button" name="" id="add-person" value="+" onclick="countUp()">
+        </div>
+      </div>
+      <div class="ticket-range">
+        <p>You can only add up to 8 tickets at a time.</p>
+      </div>
+    </div>
+    <div class="ticket-body">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+</div>
+</section> 
+
+  <div class="end-contents">
+    <p class="end-title">Ready. Set. Slide! Grab a racer mat and race down a two-lane Dueling Racer waterslide. Have an avalanche of fun as you pick up speed descending over a series of thrilling dips and bumps.</p>
+    <ul class="extendable-container">
+      <li class="extend"><h5>Admission Details</h5>
+        <div class="content">
+             <p>Operation hours are subject to change without prior notice. Please refer to official <a href="#">Resorts World Funzones website</a> for the latest information.</p>
+        </div>
+      </li>
+      <li class="extend"><h5>Redemption Info</h5>
+        <div class="content">
+            <ul>
+          <li> For Universal Studios Singapore™, Adventure Cove Waterpark and S.E.A. Aquarium tickets, please redeem your tickets using your online confirmation receipt within 90 days from the date of purchase.</li>
+          <li> Please note that the above tickets are not available for redemption at the Automated Ticket Redemption Kiosk.</li>
+        </ul>
+        </div>
+      </li>
+      <li class="extend"><h5>Terms & Conditions</h5>
+        <div class="content">
+                <p>The following terms and conditions apply to your purchase of Sentosa tickets. By confirming your purchase, you agree to be bound by these terms and conditions.</p>
+        <p><b>Confirmation</b></p>
+        <ul>
+          <li>You will receive confirmation of your booking instantly via email. In the event that you do not receive an email from us, please check your Spam folder or notify us via live chat or via the online form.</li>
+          <li>Credit Card used for purchase will be required upon redemption for verification purposes.</li>
+          <li>Online confirmation receipt must be redeemed at Sentosa Ticketing Counters within 90 days from date of purchase, unless otherwise stated.</li>
+          <li>Upon exchange of confirmation receipt for attraction tickets, all attraction tickets are only valid on the day of exchange.</li>
+          <li><p><b>Cancellation Policy</b></p></li>
+          <li>No cancellations, refunds, or changes can be made</li>
+        </ul>
+        </div>
+      </li>
+      <li class="extend"><h5>Frequently Asked Questions</h5>
+        <div class="content">
+          <div>
+         <p><b>Do I have to pay extra to visit the attractions in Adventure Cove Waterpark™?</b></p>
+         <p>Once inside Adventure Cove Waterpark, all attractions are included in your admission ticket, except the Ray Bay experience and rental of Cabanas, which vary in costs.</p>
+       </div>
+       <div>
+        <p><b>Will Adventure Cove Waterpark™ be closed during heavy downpours or thunderstorms?</b></p>
+        <p>For the safety of our guests and team members in the event of severe weather with lightning, all outdoor attractions in Adventure Cove Waterpark may close temporarily.</p>
+      </div>
+      <div>
+        <p><b>Are there facilities for guests with disabilities in Adventure Cove Waterpark™?</b></p>
+        <p>A complimentary Rider's Guide for guests with disabilities is available at Guest Services windows located inside the Waterpark.</p>
+      </div>
+      <div>
+        <p><b>Are there shower facilities in Adventure Cove Waterpark™?</b></p>
+        <p>There are both indoor and outdoor shower facilities. Indoor shower facilities are available in the male and female washrooms.</p>
+      </div>
+      <div>
+        <p><b>Will there be tubes/flotation devices/ life jackets provided in Adventure Cove Waterpark™?</b></p>
+        <p>Tubes are provided for select attractions and for guests to use in the Adventure River. Guests may also obtain a personal flotation jacket.</p>
+      </div>
+      <div>
+        <p><b>Are there Halal-certified restaurants within Adventure Cove Waterpark™?</b></p>
+        <p>There are selected food carts that are Halal-certified in the park.</p>
+      </div>
+      <div>
+        <p><b>Are there vegetarian options available in the Park?</b></p>
+        <p>Yes, our outlets offer vegetarian as well as healthy choices.</p>
+      </div>  
+        </div>
+    </li>
+    <li class="extend"><h5>Getting here</h5>
+      <div class="content">
+              <ul>
+        <li>By Public Bus: Board RWS 8 and alight at RWS 8 bus stop outside the Forum, Sentosa
+        OR Board Bus 123 and alight at Resorts World Sentosa</li>
+        <li>By Intra-Island Bus: Board Sentosa Bus A or C and alight at Resorts World Sentosa (Basement 1)</li>
+        <li>By Foot: Take a stroll down Sentosa Boardwalk to Resorts World Sentosa</li>
+        <li><p><b>Nearest Car Park</b></p></li>
+        <li>Resorts World Basement Car Park</li>
+      </ul>
+      </div>
+    </li>
+    <li class="extend"><h5>Contact Us</h5>
+      <div class="content">
+        <p>Address</p>
+        <p>Website</p>
+        <p>Gmail</p>
+        <p>Phone</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+    <!------------------------------- Price Form END ------------------------------>
+
+  </div>
+   
+  <!-- Footer -->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+        <!-- Content -->
+        <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+       </li>
+        <li>
+        <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+       </li>
+       
+       </ul>
+     </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+     <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+          </li>
+       
+       <li>
+        <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+<div class="footerPages footer-icons">
+        <!-- Social buttons -->
+        <!-- Facebook -->
+               <h5 class="text-uppercase txt-s">FOLLOW</h5>
+        <span class="icon-container">
+        <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+          <i class="fab fa-facebook iconTrans"></i>
+        </a>
+      </span>
+
+       <span class="icon-container">
+        <!-- Twitter -->
+        <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+          <i class="fab fa-twitter iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Google +-->
+        <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+          <i class="fab fa-instagram iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Dribbble -->
+        <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+          <i class="fab fa-youtube iconTrans"></i>
+        </a>
+        </span>
+
+    </div>
+<div class="footerPages">
+
+     <div class="myNote">
+
+        <!-- Links -->
+        <h5>NOTICE</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="txt-1">
+              Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+            </p>
+          </li>
+       <li>
+        <p class="txt-1">
+        Theme park tel: +44 5639 0011
+Fax: +603 5639 0022
+Email: ask@funzone.com.my</p>
+       </li>
+       <li>
+        <p class="txt-1">
+        Open Wed – Mon: 10:00am till 6:00pm</p>
+       </li>
+        <li>
+        <p class="txt-1">
+        Closed every Friday, except on Country's Public holidays</p>
+       </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+</div>
+
+  <!-- Footer Links -->
+<hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+     <img src="assets/images/ICONS/American-Express-icon.png">
+     <img src="assets/images/ICONS/Discover-icon.png">
+   </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<script>
+    var coll = document.getElementsByClassName("extend");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        var content = this;
+        if (content.style.height === "48px") {
+          content.style.height = "fit-content";
+          this.classList.add("activated");
+          this.previousElementSibling.classList.remove("activated");
+          this.nextElementSibling.classList.remove("activated");
+          this.nextElementSibling.style.height = "48px";
+          this.previousElementSibling.style.height = "48px";
+        } else {
+          content.style.height = "48px";
+        }
+      });
+    }
+  </script>
+
+<script src="assets/js/my-script.js"></script>
+</body>
+</html>

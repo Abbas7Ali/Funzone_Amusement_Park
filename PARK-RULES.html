@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>FUN ZONE | Park Rules & Regulations</title>
+</head>
+<body style="background-color: #f0f0f0;">
+      <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+                     <!------------------ Navbar of the Page Starts ------------------->
+    <nav class="myNavbar" style="height: 108px;">
+      <div class="stickyNav" id="myNavbar">
+    <div class="brandsLogo">
+      <a class="navbar-brand" href="INDEX.html">
+        <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+      </div>
+      <div class="headr-tools">
+        <div class="navSupport">
+          <button class="openSearch" id="openSearchs">
+            <span class="fas fa-search"></span>
+          </button>
+          <div class="searchHere">
+            <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+          </div>
+
+        </div>
+        <div class="bookSearch"> 
+          <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+          <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+        </div>
+      </div>
+    <div class="myPages" id="navLinks" style="background-color:#2b589b">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+</nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+      <!------------------------- End of Navbar ----------------------------->
+<div class="container p-5">
+  <div class="text-left">
+<div class="heading">
+  <h1>Park Rules & Regulations</h1>
+</div>  
+  <p class="para">
+   <h4> Security Check</h4>
+Sunway Lagoon will conduct bag checks at the entrance of thepark to ensure a safe and comfortable environment for all guests.
+<h4> Safety</h4>
+
+Children must be accompanied by an adult at all times in the park.
+Adhere to height and weight restrictions for  guests’ safety.
+Ensure<br> all safety gears are fastened properly.  Strictly follow the Ride Attendant’s instructions to ensure safety at all times.
+Follow the lifeguards’<br> instructions at all  times.
+Sharp and protruding objects,<br> loose items, umbrellas, eyewear, bags, caps and cameras are not allowed on rides.
+ 
+
+
+
+
+<h4> Guest Conduct</h4>
+Unruly, disruptive or offensive behaviour and profanity is strictly prohibited and will not be tolerated. Violators may be asked to leave<br> the  park without a refund.
+
+<h4> Smoking</h4>
+Sunway Lagoon strives to ensure that the common areas are smoke-free. For the comfort of all our guests, smoking is permitted only in<br>  designated smoking areas.
+
+<h4> Food & Alcohol</h4></h4>
+*Outside food and beverages – except those for infants or special medical needs – are not allowed into the park.<br> Alcoholic drinks are strictly prohibited.
+*Food & drinks are readily available for purchase inside the park.
+
+<h4> Re-admission</h4>
+Wristbands are valid for a ONE time admission only. Re-admission is strictly not allowed.
+
+<h4> Weather</h4>
+Due to Malaysia’s tropical climate, thunderstorms occur regularly. In the event of thunderstorms,<br> outdoor attractions will be closed for guests’ safety. There will be no refund in the event of inclement weather.
+  </p>
+
+</div>
+<br>
+<br>
+<div class="icons">
+<h3>Allow In The Park</h3>
+<br>
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr03_swimsuit.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Logo-Swimsuit" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr03_swimsuit.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr03_swimsuit.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr03_swimsuit.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr03_swimsuit.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr03_swimsuit.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr03_swimsuit.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr02_longTights.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Pants" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr02_longTights.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr02_longTights.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr02_longTights.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr02_longTights.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr02_longTights.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr02_longTights.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="T-Shirt" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr01_fullSuit.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Swimsuit" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr01_fullSuit.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr01_fullSuit.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr01_fullSuit.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr01_fullSuit.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr01_fullSuit.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr01_fullSuit.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+<br>
+
+<h3>Not Allow In Pools And Slides</h3>
+<br>
+<div class="icon2">
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr06_x_diapers.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Diaper" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr06_x_diapers.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr06_x_diapers.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr06_x_diapers.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr06_x_diapers.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr06_x_diapers.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr06_x_diapers.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr19_x_underwear.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Underwear" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr19_x_underwear.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr19_x_underwear.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr19_x_underwear.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr19_x_underwear.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr19_x_underwear.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr19_x_underwear.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr16_x_snorkel.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Snorkel" loading="lazy" srcset="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr16_x_snorkel.png?w=800&amp;ssl=1 800w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr16_x_snorkel.png?resize=300%2C225&amp;ssl=1 300w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr16_x_snorkel.png?resize=768%2C576&amp;ssl=1 768w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr16_x_snorkel.png?resize=195%2C146&amp;ssl=1 195w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr16_x_snorkel.png?resize=50%2C38&amp;ssl=1 50w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr16_x_snorkel.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr17_x_surfboard.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Surfboard" loading="lazy" srcset="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr17_x_surfboard.png?w=800&amp;ssl=1 800w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr17_x_surfboard.png?resize=300%2C225&amp;ssl=1 300w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr17_x_surfboard.png?resize=768%2C576&amp;ssl=1 768w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr17_x_surfboard.png?resize=195%2C146&amp;ssl=1 195w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr17_x_surfboard.png?resize=50%2C38&amp;ssl=1 50w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr17_x_surfboard.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr10_x_jewellery.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Jewelery" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr10_x_jewellery.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr10_x_jewellery.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr10_x_jewellery.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr10_x_jewellery.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr10_x_jewellery.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr10_x_jewellery.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr13_x_saree.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Saree" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr13_x_saree.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr13_x_saree.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr13_x_saree.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr13_x_saree.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr13_x_saree.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr13_x_saree.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr15_x_shorts.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Shorts" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr15_x_shorts.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr15_x_shorts.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr15_x_shorts.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr15_x_shorts.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr15_x_shorts.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr15_x_shorts.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr09_x_jeans.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Jeans" loading="lazy" srcset="https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr09_x_jeans.png?w=800&amp;ssl=1 800w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr09_x_jeans.png?resize=300%2C225&amp;ssl=1 300w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr09_x_jeans.png?resize=768%2C576&amp;ssl=1 768w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr09_x_jeans.png?resize=195%2C146&amp;ssl=1 195w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr09_x_jeans.png?resize=50%2C38&amp;ssl=1 50w, https://i2.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr09_x_jeans.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr07_x_spectacles.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Sunglasses" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr07_x_spectacles.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr07_x_spectacles.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr07_x_spectacles.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr07_x_spectacles.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr07_x_spectacles.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr07_x_spectacles.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="handphone" loading="lazy" srcset="https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?w=800&amp;ssl=1 800w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=300%2C225&amp;ssl=1 300w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=195%2C146&amp;ssl=1 195w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=50%2C38&amp;ssl=1 50w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+
+<img width="100" height="70" src="https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="handphone" loading="lazy" srcset="https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?w=800&amp;ssl=1 800w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=300%2C225&amp;ssl=1 300w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=768%2C576&amp;ssl=1 768w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=195%2C146&amp;ssl=1 195w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=50%2C38&amp;ssl=1 50w, https://i0.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr12_x_mobile.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr14_x_shoes.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="Shoes" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr14_x_shoes.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr14_x_shoes.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr14_x_shoes.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr14_x_shoes.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr14_x_shoes.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr14_x_shoes.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+</div>
+<h3>Must Wear Scream In The Park</h3>
+
+<br>
+
+<img width="100" height="70" src="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?fit=800%2C600&amp;ssl=1" class="vc_single_image-img attachment-full" alt="T-Shirt" loading="lazy" srcset="https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?w=800&amp;ssl=1 800w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=300%2C225&amp;ssl=1 300w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=768%2C576&amp;ssl=1 768w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=195%2C146&amp;ssl=1 195w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=50%2C38&amp;ssl=1 50w, https://i1.wp.com/sunwaylagoon.com/wp-content/uploads/2015/09/pr04_tshirt.png?resize=100%2C75&amp;ssl=1 100w" sizes="(max-width: 800px) 100vw, 800px">
+
+</div>
+
+</div>
+
+  <!-- Footer -->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+        <!-- Content -->
+        <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+       </li>
+        <li>
+        <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+       </li>
+       
+       </ul>
+     </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+     <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+          </li>
+       
+       <li>
+        <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+<div class="footerPages footer-icons">
+        <!-- Social buttons -->
+        <!-- Facebook -->
+               <h5 class="text-uppercase txt-s">FOLLOW</h5>
+        <span class="icon-container">
+        <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+          <i class="fab fa-facebook iconTrans"></i>
+        </a>
+      </span>
+
+       <span class="icon-container">
+        <!-- Twitter -->
+        <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+          <i class="fab fa-twitter iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Google +-->
+        <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+          <i class="fab fa-instagram iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Dribbble -->
+        <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+          <i class="fab fa-youtube iconTrans"></i>
+        </a>
+        </span>
+
+    </div>
+<div class="footerPages">
+
+     <div class="myNote">
+
+        <!-- Links -->
+        <h5>NOTICE</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="txt-1">
+              Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+            </p>
+          </li>
+       <li>
+        <p class="txt-1">
+        Theme park tel: +44 5639 0011
+Fax: +603 5639 0022
+Email: ask@funzone.com.my</p>
+       </li>
+       <li>
+        <p class="txt-1">
+        Open Wed – Mon: 10:00am till 6:00pm</p>
+       </li>
+        <li>
+        <p class="txt-1">
+        Closed every Friday, except on Country's Public holidays</p>
+       </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+</div>
+
+  <!-- Footer Links -->
+<hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+     <img src="assets/images/ICONS/American-Express-icon.png">
+     <img src="assets/images/ICONS/Discover-icon.png">
+   </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+<script src="assets/js/my-script.js"></script>
+</body>
+</html>

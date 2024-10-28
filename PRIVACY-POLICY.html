@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="pro.js"></script>
+
+  <title>FUN ZONE | Privacy & Policy</title>
+</head>
+<body style="background-color: #f0f0f0;">
+      <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+                     <!------------------ Navbar of the Page Starts ------------------->
+  <nav class="myNavbar" style="height: 108px;">
+      <div class="stickyNav" id="myNavbar">
+    <div class="brandsLogo">
+      <a class="navbar-brand" href="INDEX.html">
+        <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+      </div>
+      <div class="headr-tools">
+        <div class="navSupport">
+          <button class="openSearch" id="openSearchs">
+            <span class="fas fa-search"></span>
+          </button>
+          <div class="searchHere">
+            <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+          </div>
+
+        </div>
+        <div class="bookSearch"> 
+          <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+          <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+        </div>
+      </div>
+    <div class="myPages" id="navLinks" style="background-color:#2b589b">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+</nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+      <!------------------------- End of Navbar ----------------------------->
+
+<div class="paragraphed">
+<div class="text-wrap">
+<h1>Privacy Policy <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-exclamation-triangle" viewBox="0 0 16 16">
+  <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.146.146 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.163.163 0 0 1-.054.06.116.116 0 0 1-.066.017H1.146a.115.115 0 0 1-.066-.017.163.163 0 0 1-.054-.06.176.176 0 0 1 .002-.183L7.884 2.073a.147.147 0 0 1 .054-.057zm1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566z"/>
+  <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995z"/>
+</svg></h1>
+ 
+<p>  
+We at FUN ZONE, take our responsibilities, where applicable, under Pakistan's Personal Data Protection Act 2012 (the “PDPA”), seriously. We also recognize the importance of the personal data you have entrusted to us and believe that it is our responsibility to properly manage, protect and process your personal data. This Data Protection Policy is designed to assist you in understanding how we collect, use, disclose and/or process the personal data you have provided to us, as well as to assist you in making an informed decision before providing us with any of your personal data. If you, at any time, have any queries on this policy or any other  queries in relation to how we may manage, protect and/or process your personal data, please do not hesitate to contact our Data Protection Officer (the “DPO”) at Dataprotectionofficer@funzone.com.sg.</p>
+
+<p>Last updated on 27 October 2020</p>
+
+<h3>1 INTRODUCTION TO THE PDPA</h3>
+
+<p>1.1 “Personal Data” is defined under the PDPA to mean data, whether true or not, about an individual who can be identified from that data, or from that data and other information to which an organisation has or is likely to have access. Common examples of personal data could include names, identification numbers, contact information, medical records, photographs and video images.</p>
+
+<p>1.2 We will collect your personal data in accordance with the PDPA. We will notify you of the purposes for which your personal data may be collected, used, disclosed and/or processed, as well as obtain your consent for the collection, use, disclosure and/or processing of your personal data for the intended purposes, unless an exception under the law permits us to collect and process your personal data without your consent.</p>
+
+<h3>2 PURPOSES FOR COLLECTION, USE, DISCLOSURE AND PROCESSING OF PERSONAL DATA</h3>
+
+<p>2.1 The personal data which we collect from you may be collected, used, disclosed and/or processed for various purposes, depending on the circumstances for which we may/will need to process your personal data, including  : (a) evaluating and/or processing your e-newsletter subscription whereby you will be sent information on possible rewards, discounts, privileges, promotions, offers, services and/or products, offered by FZ, FZ related corporations or associated companies, as well as partners, merchants and/or third party organisations with whom FZ may collaborate, partner or tie up with (collectively the “Benefits”)( FZ related corporations or associated companies, as well as partners, merchants and/or third party organisations with whom FZ may collaborate, partner or tie up shall be referred to as “FZ Partners”); (b) administering, dealing with, managing and/or maintaining your e-newsletter subscription  with FN including but not limited to administering and dealing with your Benefits, sharing your personal data with FZ Partners to  administer and deal with Benefits, contacting you through various modes of communication such as via phone/voice call, text message and/or faxmessage, email and/or postal mail for such purposes, dealing in any matters relating to your subscription (including the mailing of correspondence , statements, information, or notices to you, which could involve disclosure of certain personal data about you to bring about delivery  of the same), performing internal administrative, operational and technology tasks for the said purposes, storage and/or backup of your personal  data; (c) providing and sending you marketing, advertising and/or promotional information and materials relating to Benefits as well as products, attractions, events and/or services that FZ or FZ Partners may be selling, marketing, offering and/or promoting, on Sentosa island,  via various modes of communication such as (a) postal mail to your postal address(es) and/or electronic transmission to your email address(es) (b ased on our records that we have of your postal address(es) and email address(es) or any new or amended postal or email address(es)  that you may provide us with from time to time) and (b) via telephone/voice calls, SMS/MMS and/or facsimile to your telephone number(s) (basedon our records that we have of your telephone number(s) or any new telephone number(s) that you may provide us with from time to time) with such  telephone/voice calls, SMS/MMS and/or facsimile being sent in accordance with Pakistan's Personal Data Protection Act; (d) dealing with  or facilitating customer service, carrying out your instructions, or dealing with or responding to any enquiries given by you or on your  behalf; (e) complying with or as required by any applicable law, governmental or regulatory requirements of any relevant jurisdiction, including meeting the requirements to make disclosure under the requirements of any law binding on FZ or on FZ related corporations or associated  companies (such as the Sentosa Development Corporation) and for the purposes of any guidelines issued by regulatory or other authorities,  whether in Pakistan or elsewhere, with which FZ or FZ related corporations or associated companies is/are expected to comply; (f>  producing statistics and research for internal and statutory reporting and/or record-keeping requirements; (g) conducting research, analysis and development activities (including but not limited to data analytics, surveys, product and service development and/or profiling) to improve  FZ services or products and/or to enhance your subscription experience, via various modes of communication such as (a) postal mail to your  postal address(es) and/or electronic transmission to your email address(es) (based on our records that we have of your postal address(es) and  email address(es) or any new or amended postal or email address(es) that you may provide us with from time to time) and (b)  via telephone/voice calls, SMS/MMS and/or facsimile to your telephone number(s) (based on our records that we have of your telephone number(s) or any new telephone number(s) that you may provide us with from time to time) with such telephone/voice calls, SMS/MMS and/or facsimile being  sent in accordance with Pakistan's Personal Data Protection Act; and (h) any other purposes which we notify you of at the  time of obtaining your consent. (collectively, the “Purposes”) As the purposes for which we may/will collect, use, disclose or process your  personal data depend on the circumstances at hand, such purpose may not appear above. However, we will notify you of such other purpose at  the time of obtaining your consent, unless processing of your personal data without your consent is permitted by the PDPA or by law.</p>
+
+<p>2.2 In order to conduct our business operations more smoothly, we may also be disclosing the personal data you have provided to us to our third party service providers, agents and/or our affiliates or related corporations, and/or other third parties whether sited in Pakistan or outside of Pakistan, for one or more of the above-stated Purposes. Such third party service providers, agents and/or affiliates or related corporations and/or other third parties would be processing your personal data either on our behalf orotherwise, for one or more of the above-stated Purposes.</p>
+
+<h3>3 SPECIFIC ISSUES FOR THE DISCLOSURE OF PERSONAL DATA TO THIRD PARTIES</h3>
+
+<p>3.1 We respect the confidentiality of the personal data you have provided to us.</p>
+
+<p>3.2 In that regard, we will not disclose your personal data to third parties without first obtaining your consent permitting us to do so. However, please note that we may disclose your personal data to third parties without first obtaining your consent in certain situations, including, without limitation, the following : (a) cases in which the disclosure is requiredor authorized based on the applicable laws and/or regulations; (b) cases in which the purpose of such disclosure is clearly in your interests, and if consent cannot be obtained in a timely way; (c) cases in which the disclosure is necessary to respond to an emergency that threatens the life, health or safety of yourself or another individual; (d) cases in which the disclosure is necessary for any investigation or proceedings; (e) cases in which the personal data is disclosed to any officer of a prescribed law enforcement agency, upon production of written authorisation signed by the head or director of that law enforcement agency or a person of a similar rank, certifying that the personal data is necessary for the purposes of the functions or duties of the officer; (f) cases in which the disclosure is to a public agency and such disclosure is necessary in the public interest; and/or (g) where such disclosure without your consent is permitted by the PDPA or by law.</p>
+
+<p>3.3 The instances listed above at paragraph 3.2 are not intended to be exhaustive. For more information on the exceptions, you are encouraged to peruse the Second, Third and Fourth Schedules of the PDPA which is publicly available at http://statutes.agc.gov.sg.</p>
+
+<p>3.4 Where we disclose your personal data to third parties with your consent, we will employ our best efforts to require such third parties to protect your personal data.</p>
+
+<h3>4 REQUEST FOR ACCESS AND/OR CORRECTION OF PERSONAL DATA</h3>
+
+<p>4.1 You may request to access and/or correct the personal data currently in our possession or control by submitting a written request to us. We will need enough information from you in order to ascertain your identity aswell as the nature of your request, so as to be able to deal with your request. Hence, please contact our FunZone Hotline at 1800-736 8672.</p>
+
+<p>4.2 For a request to access personal data, once we have sufficient information from <br>you to deal with the request, we will seek to provide you with the relevant personal data within 30 days. Where we are unable to respond to<br> you within the said 30 days, we will notify you of the soonest possible time within which we can provide you with the information requested<br>. Note that the PDPA exempts certain types of personal data from being subject to your access request.</p>
+
+<p>4.3 For a request to correct personal data, once we have sufficient information from you to deal with the request, we will : (a) correct your personal data within 30 days. Where we are unable to do so within the said 30 days, we will notify you of the soonest practicable time within which we can make the correction. Note that the PDPA exempts certain types of personal data from being subject to your correction request as well as provides for situation(s) when correction need not be made by us despite your request; and (b) subject to paragraph 4.4, we will send the corrected personal data to every other organisation to which the personal data was disclosed by FZ within a year before the date the correction was made, unless that other organisation does not need the corrected personal data for any legal or business purpose.</p>
+
+<p>4.4 Notwithstanding paragraph 4.3(b), we may, if you so consent, send the corrected personal data only to specific organisations to which the personal data was disclosed by us within a year before the date the correction was made.</p>
+
+<p>4.5 We may also be charging you a reasonable fee for the handling and processing of your requests to access your personal data. We will provide you with a written estimate of the fee we will be charging. Please note that we arenot required to respond to or deal with your access request unless you have agreed to pay the fee.</p>
+
+<h3>5 REQUEST TO WITHDRAW CONSENT</h3>
+
+<p>5.1 You may withdraw your consent for the collection, use and/or disclosure of your personal data in our possession or under our control by contacting our FUNZONE Hotline at 1800-736 8672.</p>
+
+<p>5.2 We will process your request within a reasonable time from such a request for withdrawal of consent being made, and will thereafter not collect, use and/or disclose your personal data in the manner stated in your request.</p>
+
+<p>5.3 However, your withdrawal of consent could result in certain legal consequences arising from such withdrawal. In this regard, depending on the extent of your withdrawal of consent for us to process your personal data, it may meanthat we will not be able to continue with your existing relationship with us.</p>
+
+<h3>6 ADMINISTRATION AND MANAGEMENT OF PERSONAL DATA</h3>
+
+<p>6.1 We will take reasonable efforts to ensure that your personal data is accurate and complete, if your personal data is likely to be used by FZ to make a decision that affects you, or disclosed to another organisation. However, this means that you must also update us of any changes in your personal data that you had initially provided us with. We will not be responsiblefor relying on inaccurate or incomplete personal data arising from your not updating us of any changes in your personaldata that you had initially provided us with.</p>
+
+<p>6.2 We will also put in place reasonable security arrangements to ensure that your personal data is adequately protected and secured. Appropriate security arrangements will be taken to prevent any unauthorized access, collection, use, disclosure, copying, modification, leakage, loss, damage and/or alteration of your personal data. However, we cannot assume responsibility for any unauthorized use of your personal data by third parties which are wholly attributable to factors beyond our control.</p>
+
+<p>6.3 We will also put in place measures such that your personal data in our possession or under our control is destroyed and/or anonymized as soon as it is reasonable to assume that (i) the purpose for which that personal data was collected is no longer being served by the retention of such personal data; and (ii) retention is no longer necessary for any other legal or business purposes.</p>
+
+<p>6.4 Where your personal data is to be transferred out of Singapore, we will comply with the PDPA in doing so. In this regard, this includes us obtaining your consent unless an exception under the PDPA or law applies, and taking appropriate steps to ascertain that the foreign recipient organisation of the personal data is bound by legally enforceable obligations to provide to the transferred personal data a standard of protection that is at least comparable to the protection under the Act. This may include us entering into an appropriate contract with the foreign recipient organisation dealing with the personal data transfer or permitting the personal data transfer without such a contract if the PDPA or law permits us to.</p>
+
+<h3>7 COOKIES AND OTHER TECHNOLOGIES</h3>
+
+<p>7.1 When you visit our website, we may assign your computer one or more “cookies”. By accessing our website, you agree that we can place cookies on your device.</p>
+
+<p>7.2 A cookie is a small text file that contains information that can later be read by us to facilitate your access to our website, gather statistical data, and personalize your online experience. We may use cookies on our website for purposes including, but not limited to, improving your user experience on our website, remembering your preferences and may be used to target advertising that might be of interest to you, helping us understand how our website is performing, to monitor traffic to the website, detecting your web browser’s multimedia capabilities, tracking promotional advertisements that we have displayed to you and maintaining current login and purchase information on secure portions of the website (the “Cookie Purposes”).</p>
+
+<p>7.3 Most browsers automatically accept cookies, but you can modify your browser setting to decline cookies. Generally, you can remove these cookies by following directions provided in your Internet browser’s “help” file. If you choose not to allow us to place a cookie on your computer, you may be restricted from some services and some of the interactive features offered on our websites may be similarly restricted or rendered inoperable.</p>
+
+<p>7.4 Personal data (if any) that we collect from you through cookies may be passed to our third party service providers, whether located in Singapore or elsewhere, for one or more of the Cookie Purposes, for managing and/or administering our website, or for the purpose of data hosting/storage/backup.</p>
+
+<p>7.5 The information we obtain in this manner enables us to customize the services we offer and measure the overall effectiveness of our online content, advertising campaigns, and the products and services we offer through our website. By accessing and using our website, you agree that we can use cookies on your device.</p>
+
+<p>7.6 Our website may allow third parties to download cookies to your device. Third parties, such as analytics firms and business partners, may use cookies and other technologies to collect non-personal data about your online activities while you are on our website. This information may be used to measure usage of our website and personalize advertising content on our website. We do not have access to or control over cookies or other features these third parties may use, and the information practices of these third parties are not covered by this Privacy Policy. Please refer to the privacy policies of those third parties to better understand their activities and practices.</p>
+
+<h3>8 COMPLAINT PROCESS</h3>
+
+<p>8.1 If you have any complaint or grievance regarding about how we are handling your personal data or about how we are complying with the PDPA, we welcome you to contact us with your complaint or grievance.
+
+<p>8.2 Please contact us through one of the following methods with your complaint or grievance : (a) Singapore telephone number : 1800-736 8672 (b) E-mail: Dataprotectionofficer@sentosa.com.sg Attention to the ‘Data Protection Officer’ (c) Office address : 39 Artillery Avenue Sentosa Singapore 099958 Attention to the ‘Data Protection Officer’</p>
+
+<p>8.3 Where it is an email or a letter through which you are submitting a complaint, your indication at the subject header that it is a PDPA complaint would assist us in attending to your complaint speedily by passing it on to the relevant staff in our organisation to handle. For example, you could insert the subject header as “PDPA Complaint”.</p>
+
+<h3>9 EU GDPR </h3>
+
+<p>9.1 This section of the Data Protection Policy applies only if youare located in the EU and supplements the information in this Data Protection Policy.</p>
+
+<p>9.2 We are the controller of personal data only when we collect it and determine the purposes and means of processing that personal data.</p> 
+
+<p>9.3 Our business may require us to transfer your personal data to countries outside of the EU, including to countries that may not provide the same level of data protection as your home country. We take appropriate steps to ensure that recipients of your personal data are bound to duties of confidentiality and we implement measures such as standard contractual clauses.</p>
+
+<p>9.4 European Union Data Subject Rights</p>
+
+<p>Where you are a resident in the EU, you may have certain rights under the GDPR in relation to the personal data we hold about you, which we detail below. Some of these rights only apply in certain circumstancesv as set out in more detail below:</p>
+
+<p>i. Request access to your personal information (also known as “data subject access request”. This enables you to receive a copy of the personal data we hold about you and to check that we are lawfully processing it.</p>
+
+<p>ii. Request correction of the personal information that we holdabout you. This enables you to have any incomplete or inaccurate information we hold about you corrected.</p>
+
+<p>iii. Request erasure of your personal information. This enables you to ask us to delete or remove personal information where there is no good reason for us to continue processing it. You also have the right to ask us to delete or remove your personal information where you have exercised your right to object to processing.</p>
+
+<p>iv. Object to processing of your personal information where we are relying on a legitimate interest (or those of a third party) and there is something about your particular situation which makes you want to object to processing on this ground. You also have the right to object where we are processing your personal information for direct marketing purposes.</p>
+
+<p>v. Request the restriction of processing of your personal information. This enables you to ask us to suspend the processing of personal information about you, for example if you want us to establish its accuracy or the reason for processing it.</p>
+
+<p>vi. Request the transfer of your personal information to another party.</p>
+
+<p>9.5 If you wish to exercise any of the rights above, please contact us at:</p>
+
+<p>i. Our hotline at 1800-736 8672</p>
+
+<p>ii. Emailing the DPO at Dataprotectionofficer@funzone.com.sg (Attention to the ‘Data Protection Officer’)</p>
+
+<p>iii. Logging into your account in our applications and/or website where applicable, or</p>
+
+<p>iv. Writing and mailing to us at 39 Artillery Avenue FUNZONE Singapore 099958 (Attention to the ‘Data Protection Officer’)</p>
+
+ 
+
+<h3>10 GENERAL INFORMATION</h3>
+
+<p>10.1 As part of our efforts to ensure that we properly manage, protect and process your personal data, we will be reviewing our policies, procedures and processes from time to time.</p>
+
+<p>10.2 We reserve the right to amend the terms of this Data Protection Policy at our absolute discretion. Any amended Data Protection Policy will be posted on our website and can be viewed at http://www.funzone.com.sg/en/data-protection-policy/</p>
+
+<p>10.3 You are encouraged to visit the above website from time to time to ensure that you are well informed of our latest policies in relation to personal data protection.</p>
+
+</div>
+</div>
+
+  <!-- Footer -->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+        <!-- Content -->
+        <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+       </li>
+        <li>
+        <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+       </li>
+       
+       </ul>
+     </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+     <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+          </li>
+       
+       <li>
+        <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+<div class="footerPages footer-icons">
+        <!-- Social buttons -->
+        <!-- Facebook -->
+               <h5 class="text-uppercase txt-s">FOLLOW</h5>
+        <span class="icon-container">
+        <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+          <i class="fab fa-facebook iconTrans"></i>
+        </a>
+      </span>
+
+       <span class="icon-container">
+        <!-- Twitter -->
+        <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+          <i class="fab fa-twitter iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Google +-->
+        <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+          <i class="fab fa-instagram iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Dribbble -->
+        <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+          <i class="fab fa-youtube iconTrans"></i>
+        </a>
+        </span>
+
+    </div>
+<div class="footerPages">
+
+     <div class="myNote">
+
+        <!-- Links -->
+        <h5>NOTICE</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="txt-1">
+              Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+            </p>
+          </li>
+       <li>
+        <p class="txt-1">
+        Theme park tel: +44 5639 0011
+Fax: +603 5639 0022
+Email: ask@funzone.com.my</p>
+       </li>
+       <li>
+        <p class="txt-1">
+        Open Wed – Mon: 10:00am till 6:00pm</p>
+       </li>
+        <li>
+        <p class="txt-1">
+        Closed every Friday, except on Country's Public holidays</p>
+       </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+</div>
+
+  <!-- Footer Links -->
+<hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+     <img src="assets/images/ICONS/American-Express-icon.png">
+     <img src="assets/images/ICONS/Discover-icon.png">
+   </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+
+<script src="assets/js/my-script.js"></script>
+</body>
+</html>

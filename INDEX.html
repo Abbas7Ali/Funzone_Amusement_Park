@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+  
+    <style>
+      .item{
+        border-radius: 10px;
+        width: 340px;
+        height: 390px;
+        margin: 6px;
+        background-color: white;
+        box-shadow: 0 0, 1px 2px 5px 5px darkgrey;
+
+      }
+      .item .work {
+        position: relative;
+        top: 80px;
+      }
+      .ion-ios-arrow-back, .owl-next, .owl-nav, .owl-dots {
+        display: none;
+      }
+      .owl-carousel .owl-item img {
+        width: 55%;
+        margin: 30px auto;
+      }
+      @media screen and (max-width: 480px){
+        .item {
+          width: 300px;
+        }
+      }
+    </style>
+
+  <title>FUN ZONE | Home</title>
+</head>
+<body style="background-color: #f0f0f0; line-height: 1.2;">
+  <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+      <div class="info full-info">
+         <div class="infos">
+           <div>
+             <img src="https://cdn1.parksmedia.wdprapps.disney.com/media/layout/syndicated/prod/assets/logos/message-center/header.svg">
+           </div>
+           <div class="info-header">Important Information</div>
+           <button class="info-button">Hide</button>
+           <br><hr>
+         </div>
+         <div class="complete-info">
+          <div class="info-container">
+           <p><b>Important Information about the Disneyland Resort</b></p>
+           <ul>
+             <li>
+              To enter a theme park, Guests (ages 3 and older) will need a valid ticket and a <a href="#">theme park reservation</a> for the same day and same park they want to visit.
+            </li>
+            <li>
+              Certain parks, hotels, restaurants, attractions, experiences and other offerings may be modified or unavailable, have limited capacity, and are subject to limited availability or even closure, and park admission and offerings are not guaranteed.
+              <a href="#">View important details about returning to the Disneyland Resort.</a>
+            </li>
+            <li>
+              Certain parks, hotels, restaurants, attractions, experiences and other offerings may be modified or unavailable, have limited capacity, and are subject to limited availability or even closure, and park admission and offerings are not guaranteed.
+              <a href="#"> View important details about returning to the Disneyland Resort.</a>
+            </li>
+          </ul>
+          <p><b>COVID-19 Warning</b></p>
+          <p>
+          An inherent risk of exposure to COVID-19 exists in any public place where people are present.<a href="#">View important details.</a></p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Navbar of the Page Starts -->
+
+  <nav class="myNavbar">
+      <div class="myNav" id="myNavbar">
+    <div class="brandsLogo">
+      <a class="navbar-brand" href="INDEX.html">
+        <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+      </div>
+      <div class="headr-tools">
+        <div class="navSupport">
+          <button class="openSearch" id="openSearchs">
+            <span class="fas fa-search"></span>
+          </button>
+          <div class="searchHere">
+            <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search" onkeyup="search_cards()">
+          </div>
+
+        </div>
+        <div class="bookSearch"> 
+          <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+          <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+        </div>
+      </div>
+    <div class="myPages" id="navLinks">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+           <div class="navVideo" autoplay="True">
+      <video autoplay muted loop id="video-bg">
+        <source src="assets\video\video1.mp4" type="video/mp4" >
+        </video>
+                     <div class="videoContents-wrapper">
+                <div class="videoContents">
+          <h2>MAKE TIME</h2>
+          <h3 style="font-weight:100;">FOR MORE HOLIDAYS</h3>
+          <p style=" word-spacing: 5px;">From enriching and relaxing staycations to cruises and thrilling adventures, come escape and be yourself now at our island paradise.</p>
+          <button type="button" class="cardBtn">GET TICKETS</button>
+        </div>
+        </div>
+      </div>
+</nav>
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+
+      <!------------------------- End of Navbar ----------------------------->
+
+
+  <!------------------------------------MAIN CONTENT-------------------------------->
+<div class="main-contents">
+<h1>Your Best Day Ever Begins Here!</h1>
+
+<!---------------------- TABS For Home Contents Products ----------------------------->
+<div class="choiceTabs">
+  <ul id="tab" class="tabItems">
+    <li><button id="openDefault" class="tabBtn tablink" onclick="openPage('tabOne', this, '#f75f07')">ADVENTURE LAND</button></li>
+    <li><button  class="tabBtn tablink" onclick="openPage('tabTwo', this, '#e85d04')">WATER PARK</button></li>
+    <li><button  class="tabBtn tablink" onclick="openPage('tabThree', this, '#e85d04')">EXTREME PARK</button></li>
+    <li><button  class="tabBtn tablink" onclick="openPage('tabFive', this, '#e85d04')">WILDLAND</button></li>
+  </ul>
+</div>
+<ul id="filterList"></ul>
+<div  id="tab" class="tabsData">
+  <div id="tabOne" class="tabOne">
+<a class="cardLink" href="PRODUCT-CARD-1.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>ADVENTURE LAND</span></h6>
+        <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h6 style="color:black;">Battlestar Galactica: HUMAN vs. CYLON™</h6>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Battlestar Galactica: HUMAN vs. CYLON™ are high-speed turbulent...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div></a>
+    <a class="cardLink" href="PRODUCT-CARD-2.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>ADVENTURE LAND</span></h6>
+        <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/2.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h6 style="color:black;">Jurassic Park Rapids Adventure™</h6>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Featuring a white water raft system with state-of-the art animatronics and a thrilling white water drop...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+    <a class="cardLink" href="PRODUCT-CARD-3.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>ADVENTURE LAND</span></h6>
+        <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/3.jpg" alt="product">
+      </div>
+       <div class="cards-body">
+        <h6 style="color:black;">Accelerator™</h6>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Test your intergalactic stamina and see if you can keep your wits about you while madly spinning on this...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+    <a class="cardLink" href="PRODUCT-CARD-4.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>ADVENTURE LAND</span></h6>
+        <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/4.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h6 style="color:black;">TRANSFORMERS: The Ultimate 3D Battle™</h6>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Get ready to experience this hyper-realistic 3D thrill ride, right in the middle of all...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+    <a class="cardLink" href="PRODUCT-CARD-5.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>ADVENTURE LAND</span></h6>
+        <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/5.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h6 style="color:black;">Revenge of the Mummy™</h6>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Plagued on all sides by huge fireballs, swarms of scarab beetles and an army of warrior mummies...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+    <a class="cardLink" href="PRODUCT-CARD-6.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>ADVENTURE LAND</span></h6>
+        <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/6.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h6 style="color:black;">IFLY™</h6>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Make all your flying dreams come true inside the world’s largest themed wind tunnel spanning...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+  </div>
+
+  <div id="tabTwo" class="tabOne">
+    <a class="cardLink" href="PRODUCT-CARD-7.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>WATER PARK</span></h6>
+        <img src="assets/images/PRODUCT CARDS/WATER PARK/1.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h5 style="color:black;">COVE WATERPARK™</h5>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>From zooming down high-speed water slides to drifting lazily down a winding river; snorkeling with...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+    <a class="cardLink" href="PRODUCT-CARD-8.html">
+    <div class="cards">
+      <div class="card-img">
+       <h6 class="card-discount"><span>WATER PARK</span></h6>
+        <img src="assets/images/PRODUCT CARDS/WATER PARK/2.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h5 style="color:black;">Dolphin Island™</h5>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>You’ve seen them jump and play around in videos, now learn all about the bottlenose dolphin...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+  
+    <a class="cardLink" href="PRODUCT-CARD-9.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>WATER PARK</span></h6>
+        <img src="assets/images/PRODUCT CARDS/WATER PARK/3.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h5 style="color:black;">HydroDash - Floating Aqua Park™</h5>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+         <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Get ready to climb, slide, leap and bounce your way through HydroDash, Funzone’s very first floating...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+    <a class="cardLink" href="PRODUCT-CARD-10.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>WATER PARK</span></h6>
+        <img src="assets/images/PRODUCT CARDS/WATER PARK/4.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h5 style="color:black;">OLA CLUB™</h5>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+         <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>What do you get when you combine a watersports centre where you can do paddleboarding and kayaking...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+  </div>
+
+  <div id="tabThree" class="tabOne">
+    <a class="cardLink" href="PRODUCT-CARD-11.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>EXTREME PARK</span></h6>
+        <img src="assets/images/PRODUCT CARDS/EXTREME PARK/1.webp" alt="product">
+      </div>
+      <div class="cards-body">
+        <h5 style="color:black;">SKYPARK™</h5>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>We’re a land of fun so why not take bungee jump off  the 50 meter high Skypark  in Funzone...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+    </a>
+	  
+	  
+    <a class="cardLink" href="PRODUCT-CARD-12.html">
+    <div class="cards">
+      <div class="card-img">
+         <h6 class="card-discount"><span>EXTREME PARK</span></h6>
+        <img src="assets/images/PRODUCT CARDS/EXTREME PARK/2.webp" alt="product">
+      </div>
+      <div class="cards-body">
+        <h5 style="color:black;">SKYLINE LUGE™</h5>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>Experience the luge ride via four different tracks, be it during the day or night at Skyline...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+	  </a>
+  </div>
+
+
+  <div id="tabFive" class="tabOne">
+   <a class="cardLink" href="PRODUCT-CARD-13.html">
+    <div class="cards">
+      <div class="card-img">
+        <h6 class="card-discount"><span>WILD LAND</span></h6>
+        <img src="assets/images/PRODUCT CARDS/WILD LIFE/1.jpg" alt="product">
+      </div>
+      <div class="cards-body">
+        <h5 style="color:black;">WILD LIFE PARK™</h5>
+        <p><span>Price From</span><br><span style="color: #01579b;"><small>$15.00</small></span></p>
+        <div>
+          <p style="color:#827d7d; margin-bottom: 8px;"><b>FUNZONE</b></p>
+          <p>A Funzone’s zoo where you get up close and personal with more than 150 species of animals...</p>
+        </div>
+        <center><a href="#"><button type="button" class="seeMore"><b>SEE MORE</b></button></a></center>
+      </div>
+    </div>
+	  </a>
+  </div>
+</div>
+<div class="lastButton">
+  <button class="seeAll"><a href="attraction.html">SEE ALL  <i class="  fas fa-caret-right"></i> </a></button>
+</div>
+
+<!----------------------- Award Slider------------------->
+<section class="ftco-section" style="padding-top: 30px; padding-bottom: 20px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p style="color: #ea7b34; "><b>Awards & Recognitions</b></p>
+        <h2 class="heading-section mb-2 pb-md-2">Our Latest Awards On Business</h2>
+      </div>
+      <div class="col-md-12">
+        <div class="featured-carousel owl-carousel">
+          <div class="item">
+            <div class="work">
+              <div>
+                <img src="assets/images/slid1.png" width="200px" height="200px">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="work">
+              <div>
+                <img src="assets/images/slid2.png" width="200px" height="200px">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="work">
+              <div>
+                <img src="assets/images/slid3.png" width="200px" height="200px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="newsContainer">
+<div class="newsletter">
+  <h1>Sign Up For a Newsletter</h1>
+  <h5>Sign up and be first to know about all the latest stuff!</h5>
+  <div class="signUp">
+    <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS*">
+    <button>SIGN UP</button>
+  </div>
+</div>
+</div>
+    </div>
+
+
+  <!------------------------------------BUTTONS ARIA END---------------------------->
+<!--------------------------------------------------->
+  <!-- Footer -->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+        <!-- Content -->
+        <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+       </li>
+        <li>
+        <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+       </li>
+       
+       </ul>
+     </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+     <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+          </li>
+       
+       <li>
+        <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+<div class="footerPages footer-icons">
+        <!-- Social buttons -->
+        <!-- Facebook -->
+               <h5 class="text-uppercase txt-s">FOLLOW</h5>
+        <span class="icon-container">
+        <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+          <i class="fab fa-facebook iconTrans"></i>
+        </a>
+      </span>
+
+       <span class="icon-container">
+        <!-- Twitter -->
+        <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+          <i class="fab fa-twitter iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Google +-->
+        <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+          <i class="fab fa-instagram iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Dribbble -->
+        <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+          <i class="fab fa-youtube iconTrans"></i>
+        </a>
+        </span>
+
+    </div>
+<div class="footerPages">
+
+     <div class="myNote">
+
+        <!-- Links -->
+        <h5>NOTICE</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="txt-1">
+              Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+            </p>
+          </li>
+       <li>
+        <p class="txt-1">
+        Theme park tel: +44 5639 0011
+Fax: +603 5639 0022
+Email: ask@funzone.com.my</p>
+       </li>
+       <li>
+        <p class="txt-1">
+        Open Wed – Mon: 10:00am till 6:00pm</p>
+       </li>
+        <li>
+        <p class="txt-1">
+        Closed every Friday, except on Country's Public holidays</p>
+       </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+</div>
+
+  <!-- Footer Links -->
+<hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+     <img src="assets/images/ICONS/American-Express-icon.png">
+     <img src="assets/images/ICONS/Discover-icon.png">
+   </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+<script src="assets/js/my-script.js"></script>
+<script>
+  window.onscroll = function() {scrolled()};
+
+var bounding = document.getElementById("navLinks");
+var navbar = document.getElementById("myNavbar");
+var sticky = bounding.offsetTop;
+
+function scrolled() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("stickyNav");
+    bounding.classList.add("myLinks");
+  } else {
+    navbar.classList.remove("stickyNav");
+    bounding.classList.remove("myLinks");
+  }
+}
+</script>
+<script>
+  $(document).ready(function (){
+  setTimeout(function() {
+    $('.loader-wrapper').fadeOut(3000);
+  }, 2000);
+});
+</script>
+<script>
+
+function search_cards() {
+    let input = document.getElementById('mySearch').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('cards');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+
+
+  <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

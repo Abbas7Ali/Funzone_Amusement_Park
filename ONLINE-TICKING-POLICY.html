@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>FUN ZONE | Online Ticketing Policy</title>
+</head>
+<body style="background-color: #f0f0f0;">
+      <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+                     <!------------------ Navbar of the Page Starts ------------------->
+  <nav class="myNavbar" style="height: 108px;">
+      <div class="stickyNav" id="myNavbar">
+    <div class="brandsLogo">
+      <a class="navbar-brand" href="INDEX.html">
+        <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+      </div>
+      <div class="headr-tools">
+        <div class="navSupport">
+          <button class="openSearch" id="openSearchs">
+            <span class="fas fa-search"></span>
+          </button>
+          <div class="searchHere">
+            <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+          </div>
+
+        </div>
+        <div class="bookSearch"> 
+          <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+          <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+        </div>
+      </div>
+    <div class="myPages" id="navLinks" style="background-color:#2b589b">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+</nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+      <!------------------------- End of Navbar ----------------------------->
+
+<div class="paragraphed">
+<div class="heading">
+  <h1>Online Ticketing Policy</h1>
+</div>  
+  <p class="para">
+THE FOLLOWING TERMS AND CONDITIONS APPLY TO YOUR ACCESS AND THE USE OF THIS ONLINE TICKETING AND THE SERVICES PROVIDED HEREIN BY SUNWAY LAGOON SDN BHD (“SUNWAY”). BY ACCESSING ANY PAGE OF THIS ONLINE TICKETING AND/OR USING THE SERVICES, YOU AGREE TO BE BOUND BY THESE TERMS AND CONDITIONS WITHOUT LIMITATION OR MODIFICATION. THE FOLLOWING TERMS SHALL CONSTITUTE A LEGAL AGREEMENT BETWEEN YOU AND SUNWAY LAGOON SDN BHD (“SUNWAY”)
+IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, PLEASE DO NOT ACCESS TO SUNWAY’S ONLINE TICKETING AND/OR USE OF THE ONLINE TICKETING SERVICES.
+
+	  <br>
+<br> 
+General Line: + 60 3 5639 0000 (Operating Hour: Mon – Fri, from 9am – 6pm)<br>
+Email: ask_lagoon@sunway.com.my (Operating Hour: Mon – Fri, 9am – 6pm)
+<br>
+<br>
+
+ 
+
+In order to use Sunway’s Online Ticketing Services, you must attain at least 18 years  old or above as at the time of your usage/purchasing. If you are under 18 years old, you shall use Sunway Online Ticketing services only under the  supervision and with the consent of your parent or legal guardian.
+The information, materials, functions and contents provided in the pages of this  online ticketing may be changed from time to time with or without notice at Sunway Lagoon absolute discretion. Your continued access or use of the  online ticketing and/or the services provided herein subsequent to any such change will be deemed as your acceptance of those changes.
+	  <br>
+All prices quoted are in Ringgit Malaysian (RM). Prices are subject to change without  prior notice.
+You agreed to provide true, accurate and complete details asked in Sunway’s online  customer information.
+You shall not impersonate or attempt to impersonate any other person by using the name,  address, credit card information, e-mail address of any other person for any reason whatsoever, without prior consent or forge a header or otherwise manipulate identifiers in order to disguise the origins of an e-mail.
+
+
+
+Payment being made does not mean that your transaction has been accepted. We will only  send confirmation via email for purchases that have been verified as genuine purchases.
+<br><br>
+
+E-Ticket(s) must be purchased advisable 24 hours before your visit date at Sunway Lagoon  Theme Park to allow your transaction to be processed. Failure to do so may mean normal admission charges will need to be paid in order for you to enter  Sunway Lagoon, Theme Park.
+E-Ticket(s) are non-transferable, non-exchangeable for cash and can be used once only and  no partial redemption is allowed. This E-Ticket(s) may not be resale and/or passed to any third party.
+All the following uses are prohibited and may constitute a criminal offence(s):-
+The resale of E-Tickets to any third party; Uses of E-Tickets for any purposes that are unlawful or contrary to these Online  Ticketing Terms and Conditions or Terms of Use of Online Ticketing;
+Use Online Ticketing Services in any manner that could damage, disable, overburden, or impair  Sunway’s Online Ticketing Services or interfere with any other party’s use and enjoyment of them;
+ 
+
+
+Attempt to gain unauthorized access to any account, computer systems or networks associated  with the Online Ticketing Services; or
+Obtain or attempt to obtain any materials or information through the Online Ticketing Services or  by any means not intentionally made available or provided for by Sunway.
+<br><br>
+
+
+
+No exchange, refund, replacement and/or extension will be made under any circumstances.  No cancellation will be accepted upon confirmation of purchase. On a case to case basis with approval from the Management, a 3% refund charges  will be imposed for refund process fee.
+Unauthorized duplication and/or sale of this E-Ticket(s) will result in denial of entering the park.
+Discount vouchers, promotional coupons or other offers cannot be used in conjunction with E-Ticket(s).
+Sunway shall not be responsible or liable for any damages (whether direct, indirect, special or consequential), late or non-delivery of tickets, loss, embarrassment, goodwill expenses or loss of profit incurred or suffered by> You under the circumstances including but not limited to the following:
+This online ticketing not being available;
+The email address is incorrect; Refusal from you (should such situations occur, the purchase is considered delivered & no refunds will be made);
+Any access, use or inability to access or use this online ticketing and/or any other website linked to this online ticketing;
+Any failure, delays in transmission, interruption, errors, omission or breakdown of any equipment, system, server software or terminal of Sunway or of the payment gateway;Attacked or interfered by any computer virus, corruption, worms or by any person;Improper use or unauthorised use of this online ticketing; The taking and compliance of any of Your requests or instructions via this online ticketing or any affiliates’ website; Any inaccuracies, errors, defects of any content of this online ticketing or other websites linked to this online ticketing; Any operation malfunction or defect of Your computer terminal, systems or software used in accessing this online ticketing; The destruction or alteration of Your request, data or information transmitted by You to Sunway or its affiliates’ website;
+Natural disaster, violence, warlike situations and/or reasons beyond Sunway’s control
+And shall not be responsible or liable unutilised E-Ticket(s) and/or loss of recreational opportunities due to rides maintenance, capacity, inclement weather, special events and/or any circumstances beyond Sunway control.
+<br><br>
+
+
+It is the E-Ticket(s) guest responsibility to check prior to purchase that the information supplied in respect of the E-Ticket(s) is accurate. If inaccurate information is supplied this may result in additional charges or voiding of the E-Ticket(s).
+Sunway reserves the right to request additional information or documentation from time to time for verification purpose.
+Sunway reserves the right not to honour any online sales transaction if we have reason to believe that the transaction is fraudulent and if you have failed to provide accurate and complete information at the time of application.
+<br><br>
+
+
+Sunway’s management reserves the right to substitute, amend or terminate any offers or promotions at any time without prior notice.
+Sunway may vary, update or change these Online Ticketing Terms and Conditions at any time at its sole discretion without prior notice. Any variation, updates or changes will be posted on Sunway’s website. Your continued access to or use of Sunway’s Online Ticketing service after any such changes shall constitute your consentto such change.
+Sunway reserves the right to terminate or suspend your access to Sunway’s Online Ticketing Service or any part thereof at any time without notice for any breach of terms and conditions.
+<br>
+
+You may refer to Online Ticketing Terms of Use of the online ticketing before going on.
+<br><br>
+
+Privacy Policy :
+The protection of personal data is an important concern
+ to Sunway. By using Sunway’s Online Ticketing service, you consent to Sunway’s collection and use of your personal information in accordance with Sunway’s Privacy Policy. Please visit Sunway’s Privacy Policy at www.sunway.com.my/privacy-notice/ to understand on how Sunway may collect and use the personal information that you have provided to Sunway.
+</p>
+</div>
+
+  <!-- Footer -->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+        <!-- Content -->
+        <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+       </li>
+        <li>
+        <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+       </li>
+       
+       </ul>
+     </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+     <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+          </li>
+       
+       <li>
+        <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+<div class="footerPages footer-icons">
+        <!-- Social buttons -->
+        <!-- Facebook -->
+               <h5 class="text-uppercase txt-s">FOLLOW</h5>
+        <span class="icon-container">
+        <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+          <i class="fab fa-facebook iconTrans"></i>
+        </a>
+      </span>
+
+       <span class="icon-container">
+        <!-- Twitter -->
+        <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+          <i class="fab fa-twitter iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Google +-->
+        <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+          <i class="fab fa-instagram iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Dribbble -->
+        <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+          <i class="fab fa-youtube iconTrans"></i>
+        </a>
+        </span>
+
+    </div>
+<div class="footerPages">
+
+     <div class="myNote">
+
+        <!-- Links -->
+        <h5>NOTICE</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="txt-1">
+              Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+            </p>
+          </li>
+       <li>
+        <p class="txt-1">
+        Theme park tel: +44 5639 0011
+Fax: +603 5639 0022
+Email: ask@funzone.com.my</p>
+       </li>
+       <li>
+        <p class="txt-1">
+        Open Wed – Mon: 10:00am till 6:00pm</p>
+       </li>
+        <li>
+        <p class="txt-1">
+        Closed every Friday, except on Country's Public holidays</p>
+       </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+</div>
+
+  <!-- Footer Links -->
+<hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+     <img src="assets/images/ICONS/American-Express-icon.png">
+     <img src="assets/images/ICONS/Discover-icon.png">
+   </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+
+<script src="assets/js/my-script.js"></script>
+</body>
+</html>

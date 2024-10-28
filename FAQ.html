@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>FUN ZONE | FAQs</title>
+<style>
+.wave-border {
+display: none;}
+</style>
+</head>
+<body style="background-color: #f0f0f0; line-height: 1.2;">
+  <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Navbar of the Page Starts -->
+  <nav class="myNavbar" style="height: 108px;">
+    <div class="stickyNav" id="myNavbar">
+      <div class="brandsLogo">
+        <a class="navbar-brand" href="INDEX.html">
+          <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+        </div>
+        <div class="headr-tools">
+          <div class="navSupport">
+            <button class="openSearch" id="openSearchs">
+              <span class="fas fa-search"></span>
+            </button>
+            <div class="searchHere">
+              <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+            </div>
+
+          </div>
+          <div class="bookSearch"> 
+            <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+            <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+          </div>
+        </div>
+    <div class="myPages" id="navLinks" style="background-color:#2b589b">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+  </nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+  <!------------------------- End of Navbar ----------------------------->
+  <div class="container">
+    <div class="para-img-about"></div>
+    <div class="wave-border"></div>
+
+    <div class="container">
+      <h1>FREQUENTLY ASKED <small>QUESTIONS</small></h1>
+      <p>We are happy to help. Find answers to some of the most frequently asked questions about our attractions, hotels, restaurants and more in Sentosa.</p>
+      <div class="faq-container">
+        <h2>Islander Membership</h2>
+        <div>
+          <h5 data-toggle="collapse" href="#collapse1">
+            <a>Are there any membership schemes in Sentosa?</a>
+          </h5>
+          <div id="collapse1" class="collapse">
+            <div>
+              <p>Islander membership now comes absolutely FREE, with effect from 1 April 2021, for you to enjoy and discover Sentosa with the following perks:</p>
+              <ol>
+                <li>Priority access to all beaches</li>
+                <li>Complimentary 2-hour parking at Beach Station</li>
+                <li>Members’ Day Promotions</li>
+                <li>Year-long discounts at Sentosa participating outlets</li>
+                <li>Birthday Treats</li>
+                <li>UNLIMITED complimentary Island Admissions via the Sentosa Express & Gantry</li>
+              </ol>
+              <p>Visit <a href="#">here</a> to find out more on the benefits and privileges.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5 data-toggle="collapse" href="#collapse2">
+            <a>Is there still the option of the Family Islander Membership?</a>
+          </h5>
+          <div id="collapse2" class="collapse">
+            <div>
+              <p>
+                W.E.F from 31 March 2020, we have ceased the sales of Family Islander Membership. You may sign up for the Complimentary Islander Membership here.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h5 data-toggle="collapse" href="#collapse3">
+            <a>I have a child under the age of 12 years. Do I need to sign up Islander membership?</a>
+          </h5>
+          <div id="collapse3" class="collapse">
+            <div>
+              <p>
+                Children under 12 years old are entitled to free entry to Sentosa with their child or student Ez-link card. However, you may consider signing your children up for Islander Membership at no charge. Do note that each membership requires a unique mobile number and email address.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="faq-container">
+      <h2>Attractions & Island Partners</h2>
+      <div>
+        <h5 data-toggle="collapse" href="#Partners-qno-1">
+          <a>Does my child require a ticket to visit the attractions?</a>
+        </h5>
+        <div id="Partners-qno-1" class="collapse">
+          <div>
+            <p>Children below 3 years old enjoys complimentary admission to the island and attractions. We would also like to remind parents/guardians that some attractions have minimum height requirement. Please visit the respective attractions website for further information.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#Partners-qno-2">
+          <a>Would I be able to purchase island admission and attraction tickets online?</a>
+        </h5>
+        <div id="Partners-qno-2" class="collapse">
+          <div>
+            <p>
+              Yes, you may purchase Sentosa Express tickets, attraction tickets and Sentosa Fun Passes from <a href="#">Funzone Online Store</a>.
+              Alternatively, you may also buy the tickets at any Sentosa Station Ticketing Counter, located at Level 3 on your day of visit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#Partners-qno-3">
+          <a>Is filming or taking wedding photo shoots on the island allowed?</a>
+        </h5>
+        <div id="Partners-qno-3" class="collapse">
+          <div>
+            <p>
+              Filming and photo shoots for personal use is allowed on the island. A permit is only required if the footage is for commercial or corporate use. Please contact us for further clarifications.
+            </p>
+            <p>
+            Some areas, such as Tanjong Rimau (Siloso Headland) and Mount Serapong, are also important biodiversity sites with a rich array of flora and fauna. A permit is required if you wish to conduct research studies, photography, filming or other programmes at any of the nature areas mentioned above.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="faq-container">
+      <h2>Facilities</h2>
+      <div>
+        <h5 data-toggle="collapse" href="#facility-qno-1">
+          <a>Are there any Automated Teller Machines (ATM) in Sentosa?</a>
+        </h5>
+        <div id="facility-qno-1" class="collapse">
+          <div>
+            <p>
+
+            ATMs are located at the following locations:</p>
+
+            <p>- Sentosa Golf Club (DBS)</p>
+            <p>- Quayside Isle (DBS)</p>
+            <p>
+              - Resorts World Sentosa
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#facility-qno-2">
+          <a>Would I be able to purchase island admission and attraction tickets online?</a>
+        </h5>
+        <div id="facility-qno-2" class="collapse">
+          <div>
+            <p>
+              Yes, you may purchase Sentosa Express tickets, attraction tickets and Sentosa Fun Passes from <a href="#">Funzone Online Store</a>.
+              Alternatively, you may also buy the tickets at any Sentosa Station Ticketing Counter, located at Level 3 on your day of visit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#facility-qno-3">
+          <a>Are baby prams and/or wheelchairs available for rent in Sentosa?</a>
+        </h5>
+        <div id="facility-qno-3" class="collapse">
+          <div>
+            <p>
+              Islandwide rental services for baby prams and wheelchairs are not available.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="load-more">
+    <h4><a data-toggle="collapse" href="#more-contain">Load More Topics</a></h4>
+  </div>
+  <div class="collapse" id="more-contain">
+    <div class="faq-container">
+      <h2>Attractions & Island Partners</h2>
+      <div>
+        <h5 data-toggle="collapse" href="#load-Partners-qno-1">
+          <a>Does my child require a ticket to visit the attractions?</a>
+        </h5>
+        <div id="load-Partners-qno-1" class="collapse">
+          <div>
+            <p>Children below 3 years old enjoys complimentary admission to the island and attractions. We would also like to remind parents/guardians that some attractions have minimum height requirement. Please visit the respective attractions website for further information.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#load-Partners-qno-2">
+          <a>Would I be able to purchase island admission and attraction tickets online?</a>
+        </h5>
+        <div id="load-Partners-qno-2" class="collapse">
+          <div>
+            <p>
+              Yes, you may purchase Sentosa Express tickets, attraction tickets and Sentosa Fun Passes from <a href="#">Funzone Online Store</a>.
+              Alternatively, you may also buy the tickets at any Sentosa Station Ticketing Counter, located at Level 3 on your day of visit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#load-Partners-qno-3">
+          <a>Is filming or taking wedding photo shoots on the island allowed?</a>
+        </h5>
+        <div id="load-Partners-qno-3" class="collapse">
+          <div>
+            <p>
+              Filming and photo shoots for personal use is allowed on the island. A permit is only required if the footage is for commercial or corporate use. Please contact us for further clarifications.
+            </p>
+            <p>
+            Some areas, such as Tanjong Rimau (Siloso Headland) and Mount Serapong, are also important biodiversity sites with a rich array of flora and fauna. A permit is required if you wish to conduct research studies, photography, filming or other programmes at any of the nature areas mentioned above.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="faq-container">
+      <h2>Facilities</h2>
+      <div>
+        <h5 data-toggle="collapse" href="#more-facility-qno-1">
+          <a>Are there any Automated Teller Machines (ATM) in Sentosa?</a>
+        </h5>
+        <div id="more-facility-qno-1" class="collapse">
+          <div>
+            <p>
+
+            ATMs are located at the following locations:</p>
+
+            <p>- Sentosa Golf Club (DBS)</p>
+            <p>- Quayside Isle (DBS)</p>
+            <p>
+              - Resorts World Sentosa
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#more-facility-qno-2">
+          <a>Would I be able to purchase island admission and attraction tickets online?</a>
+        </h5>
+        <div id="more-facility-qno-2" class="collapse">
+          <div>
+            <p>
+              Yes, you may purchase Sentosa Express tickets, attraction tickets and Sentosa Fun Passes from <a href="#">Funzone Online Store</a>.
+              Alternatively, you may also buy the tickets at any Sentosa Station Ticketing Counter, located at Level 3 on your day of visit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#more-facility-qno-3">
+          <a>Are baby prams and/or wheelchairs available for rent in Sentosa?</a>
+        </h5>
+        <div id="more-facility-qno-3" class="collapse">
+          <div>
+            <p>
+              Islandwide rental services for baby prams and wheelchairs are not available.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-container">
+      <h2>Islander Membership</h2>
+      <div>
+        <h5 data-toggle="collapse" href="#more-collapse1">
+          <a>Are there any membership schemes in Sentosa?</a>
+        </h5>
+        <div id="more-collapse1" class="collapse">
+          <div>
+            <p>Islander membership now comes absolutely FREE, with effect from 1 April 2021, for you to enjoy and discover Sentosa with the following perks:</p>
+            <ol>
+              <li>Priority access to all beaches</li>
+              <li>Complimentary 2-hour parking at Beach Station</li>
+              <li>Members’ Day Promotions</li>
+              <li>Year-long discounts at Sentosa participating outlets</li>
+              <li>Birthday Treats</li>
+              <li>UNLIMITED complimentary Island Admissions via the Sentosa Express & Gantry</li>
+            </ol>
+            <p>Visit <a href="#">here</a> to find out more on the benefits and privileges.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#more-collapse2">
+          <a>Is there still the option of the Family Islander Membership?</a>
+        </h5>
+        <div id="more-collapse2" class="collapse">
+          <div>
+            <p>
+              W.E.F from 31 March 2020, we have ceased the sales of Family Islander Membership. You may sign up for the Complimentary Islander Membership here.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5 data-toggle="collapse" href="#more-collapse3">
+          <a>I have a child under the age of 12 years. Do I need to sign up Islander membership?</a>
+        </h5>
+        <div id="more-collapse3" class="collapse">
+          <div>
+            <p>
+              Children under 12 years old are entitled to free entry to Sentosa with their child or student Ez-link card. However, you may consider signing your children up for Islander Membership at no charge. Do note that each membership requires a unique mobile number and email address.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="for-contact">
+      <h5>For more info Contact</h5>
+      <p>phone-num here</p>
+      <p>email address here</p>
+      <p>location here</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!------------------------------- Footer ----------------------------------->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+    <!-- Content -->
+    <div class="footerPages">
+      <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+      <ul class="list-unstyled">
+        <li>
+          <p>
+            <a class="btn footer-link" href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+          <li>
+            <p><a class="btn footer-link" href="CONTACT-US.html">CONTACT US</a></p>
+          </li>
+          <li>
+            <p><a class="btn footer-link" href="CAREER.html">CAREER</a></p>
+          </li>
+          <li>
+            <p><a class="btn footer-link" href="FAQ.html">FAQ</a></p>
+          </li>
+
+        </ul>
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a class="btn footer-link" href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+            </li>
+            <li>
+              <p><a class="btn footer-link" href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+            </li>
+            <li>
+              <p><a class="btn footer-link" href="PARK-RULES.html">PARK RULES</a></p>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="footerPages">
+
+          <!-- Links -->
+          <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <a class="btn footer-link" href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+              </li>
+
+              <li>
+                <p><a class="btn footer-link" href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="footerPages footer-icons">
+            <!-- Social buttons -->
+            <!-- Facebook -->
+            <h5 class="text-uppercase txt-s">FOLLOW</h5>
+            <span class="icon-container">
+              <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+                <i class="fab fa-facebook iconTrans"></i>
+              </a>
+            </span>
+
+            <span class="icon-container">
+              <!-- Twitter -->
+              <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+                <i class="fab fa-twitter iconTrans"></i>
+              </a>
+            </span>
+            <span class="icon-container">
+              <!-- Google +-->
+              <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+                <i class="fab fa-instagram iconTrans"></i>
+              </a>
+            </span>
+            <span class="icon-container">
+              <!-- Dribbble -->
+              <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+                <i class="fab fa-youtube iconTrans"></i>
+              </a>
+            </span>
+
+          </div>
+          <div class="footerPages">
+
+           <div class="myNote">
+
+            <!-- Links -->
+            <h5>NOTICE</h5>
+            <ul class="list-unstyled">
+              <li>
+                <p class="txt-1">
+                  Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+                </p>
+              </li>
+              <li>
+                <p class="txt-1">
+                  Theme park tel: +44 5639 0011
+                  Fax: +603 5639 0022
+                Email: ask@funzone.com.my</p>
+              </li>
+              <li>
+                <p class="txt-1">
+                Open Wed – Mon: 10:00am till 6:00pm</p>
+              </li>
+              <li>
+                <p class="txt-1">
+                Closed every Friday, except on Country's Public holidays</p>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <!-- Grid row -->
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer Links -->
+<hr class="clearfix w-100">
+<!-- Copyright -->
+<div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+ <div class="paymentMethod">
+  <img src="assets/images/ICONS/Visa-icon.png">
+  <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+  <img src="assets/images/ICONS/Paypal-icon.png">
+  <img src="assets/images/ICONS/American-Express-icon.png">
+  <img src="assets/images/ICONS/Discover-icon.png">
+</div>
+</div>
+<!-- Copyright -->
+
+</footer>
+
+<script src="assets/js/my-script.js"></script>
+
+</body>
+</html>
+</body>
+</html>

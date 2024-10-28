@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/mediaquery.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/LOGO/logo.png">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <title>FUN ZONE | HydroDash - Floating Aqua Park™ </title>
+</head>
+<body style="background-color: #f0f0f0;">
+      <div class="loader-wrapper">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+                     <!------------------ Navbar of the Page Starts ------------------->
+  <nav class="myNavbar" style="height: 108px;">
+      <div class="stickyNav" id="myNavbar">
+    <div class="brandsLogo">
+      <a class="navbar-brand" href="INDEX.html">
+        <img class="siteLogo" src="assets/images/LOGO/logo.png" class="logo"  alt="Brands-Logo"></a>
+      </div>
+      <div class="headr-tools">
+        <div class="navSupport">
+          <button class="openSearch" id="openSearchs">
+            <span class="fas fa-search"></span>
+          </button>
+          <div class="searchHere">
+            <input class="mySearch" id="mySearch" type="search" placeholder="Search" aria-label="Search">
+          </div>
+
+        </div>
+        <div class="bookSearch"> 
+          <a class="bookNow" href="sign-up.html"><i class="fas fa-user-alt"></i></a>
+          <button class="cartOpen" onclick="openCart()"><i class="fas fa-shopping-cart"></i> Cart</button>
+        </div>
+      </div>
+    <div class="myPages" id="navLinks" style="background-color:#2b589b">
+     <button class="burger-button" onclick="openNav()"><span>&#9776;</span></button>
+     <ul class="navItems" id="mySidenav">
+      <button class="navClose" onclick="closeNav()">&times;</button>
+      <li class="dropContain">
+        <a>EXPLORE <i class="fas fa-caret-right"></i></a>
+        <ul class="dropContent">
+          <li><a href="packages.html">PACKAGES</a></li>
+          <li><a href="show.html">SHOWS</a></li>
+          <center><p style="color: black;">Private Spaces <i class="fas fa-caret-down"></i></p></center>
+          <li><a href="monkey-island.html">MONKEY ISLAND</a></li>
+          <li><a href="cabana.html">CABANA</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="LESIURE-DINING.html">LEISURE & DINNING</a>
+      </li>
+
+      <li>
+        <a href="Promotions.html">PROMOTION</a>
+      </li>
+      <li>
+        <a href="BUSINESS-OPPORTUNITIES.html">BUSINESS OPPORTUNITIES</a>
+      </li>
+    </ul>    
+  </div>
+    </div>
+</nav>
+
+<div class="cartContainer" id="tinyCart">
+  <div class="cart-header">
+    <button class="cartClose" onclick="closeCart()">&times;</button>
+    <h4>SHOPPING CART</h4>
+  </div>
+  <div class="cart-body">
+    <img src="assets/images/PRODUCT CARDS/ADVENTURE LAND/1.jpg" alt="product" width="100px;" height="100px;">
+    <div class="product-info">
+      <p>Adventure Land</p>
+      <p><b>PKR <span class="total">13920</span></b></p>
+      <div class="item-quantity-wrapper">
+        <button class="remove-person" onclick="countDown()">-</button>
+        <input id="mini-quantity-person" class="item-quantity" type="number" name="number" value="1">
+        <button class="add-person" onclick="countUp()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="maintained-icons">
+    <p class="addNote"><i class="far fa-clipboard"></i></p>
+    <p class="estimate"><i class="fas fa-shipping-fast"></i></p>
+    <p class="coupon"><i class="fas fa-envelope-open-text"></i></p>
+  </div>
+  <div class="add-note">
+    <div class="row">
+      <div class="col-12"><textarea class="form-control" rows="5" resize="false"></textarea></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="estimate-shopping">
+    <div class="row">
+      <div class="col-12"><p>Estimate Shipping</p></div>
+      <div class="col-12">Country</div>
+      <div class="col-12"><select class="form-control">
+        <option>Pakistan</option>
+      </select></div>
+      <div class="col-12">Portal/Zip Code</div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">CALCULATE SHIPPING</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="coupon-shop">
+    <div class="row">
+      <div class="col-12">Add A Coupon</div>
+      <div class="col-12"><p>Coupon code will work on checkout page</p></div>
+      <div class="col-12"><input class="form-control" type="text" name=""></div>
+      <div class="col-11"><button class="form-control save-btn">SAVE</button></div>
+      <div class="col-11"><button class="form-control cancel-btn">CANCEL</button></div>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <p class="sub-total"><b>PKR<span>13,499</span></b></p>
+    <p><b>Sub Total:</b></p>
+    <p>Taxes, shipping and discounts codes calculated at CHECKOUT</p>
+    <a href="checkout.html"><buttON CLaSS="check-outBtn">CHECK OUT</button><a/>
+  </div>
+</div>
+
+      <!------------------------- End of Navbar ----------------------------->
+
+
+   <div class="hero-image-container">
+      <div class="para-img9">
+      <div class="img-con">
+      </div>
+    </div>
+    <div class="wave-img">
+     <div class="wave-border"></div>
+   </div>
+   </div>
+   
+
+  <div class="new-container">
+     <div class="top-contents">
+      <div class="contents-wrapper">
+    <div class="product-title">
+      <p><b>Water Park</b></p>
+      <h1><span class="hero-description" id="hero-title"><strong>WATERPARK</strong> <small>HYDRODASH - FLOATING AQUA PARK™ </small></span></h1>
+    </div>
+    <div class="">
+      
+      <p>Get ready to climb, slide, leap and bounce your way through HydroDash, Singapore’s very first floating aqua park. Challenge friends, family and loved ones around our thrill-seeking floating obstacle course in Singapore and let the games begin! Designed for fun for everyone, this water theme park is a family-friendly– our inflatable playgrounds are a family-friendly attraction offering activities, excitement and delight for all ages.</p>
+      
+      <hr>
+    </div>
+  </div>
+    <div class="timing-wrapper">
+      <div>
+        <p><b>TRIP ADVISOR RATING</b></p>
+        <div class="ratings">
+          <span>
+            <i class="fas fa-glasses"></i>
+          </span>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+          <i class="fa fa-circle"></i>
+        </div>
+        <p>Based on 2470 reviews</p>
+      </div>
+      <p><b>Opening Hours</b></p>
+     <p>Reopening on 14 June 2021</p>
+     <div>
+       <p><i class=" far fa-clock " style="font-size:24px"></i>  Sat- Sun: 10am - 5pm</p>
+       <p>Staggered ride operation</p>
+     </div>
+    
+    </div>
+  </div>
+<!-------------------------------------->
+
+<section class="team">
+  <div class="ticket-wrappers">
+    <h3>Ticket options <div>3</div></h3>
+  <div class="ticket-container">
+    <div class="ticket-header">
+      <div class="ticket-title">
+        <p>The Challenge Package 2Skydive -Locals Norm Time</p>
+      </div>
+      <div class="ticket-content">
+        <div class="ticket-price">
+          <small><b>PER TICKET</b></small><br>
+          <h2><span>$</span>89<small><sup>.00</sup></small></h2>
+        </div>
+        <div class="ticket-add">
+          <input type="button" name="" id="remove-person" value="-" onclick="countDown()">
+          <input type="text" name="quantity" id="quantity-person" value="0" size="4" maxlength="4">
+          <input type="button" name="" id="add-person" value="+" onclick="countUp()">
+        </div>
+      </div>
+      <div class="ticket-range">
+        <p>You can only add up to 8 tickets at a time.</p>
+      </div>
+    </div>
+    <div class="ticket-body">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+    <div class="ticket-container">
+    <div class="ticket-header">
+      <div class="ticket-title">
+        <p>The Challenge Package 2Skydive -Locals Norm Time</p>
+      </div>
+      <div class="ticket-content">
+        <div class="ticket-price">
+          <small><b>PER TICKET</b></small><br>
+          <h2><span>$</span>89<small><sup>.00</sup></small></h2>
+        </div>
+        <div class="ticket-add">
+          <input type="button" name="" id="remove-person" value="-" onclick="countDown()">
+          <input type="text" name="quantity" id="quantity-person" value="0" size="4" maxlength="4">
+          <input type="button" name="" id="add-person" value="+" onclick="countUp()">
+        </div>
+      </div>
+      <div class="ticket-range">
+        <p>You can only add up to 8 tickets at a time.</p>
+      </div>
+    </div>
+    <div class="ticket-body">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+    <div class="ticket-container">
+    <div class="ticket-header">
+      <div class="ticket-title">
+        <p>The Challenge Package 2Skydive -Locals Norm Time</p>
+      </div>
+      <div class="ticket-content">
+        <div class="ticket-price">
+          <small><b>PER TICKET</b></small><br>
+          <h2><span>$</span>89<small><sup>.00</sup></small></h2>
+        </div>
+        <div class="ticket-add">
+          <input type="button" name="" id="remove-person" value="-" onclick="countDown()">
+          <input type="text" name="quantity" id="quantity-person" value="0" size="4" maxlength="4">
+          <input type="button" name="" id="add-person" value="+" onclick="countUp()">
+        </div>
+      </div>
+      <div class="ticket-range">
+        <p>You can only add up to 8 tickets at a time.</p>
+      </div>
+    </div>
+    <div class="ticket-body">
+      <button>ADD TO CART</button>
+    </div>
+  </div>
+</div>
+</section> 
+
+  <div class="end-contents">
+    <ul class="extendable-container">
+      <li class="extend"><h5>Beach Safety Details</h5>
+        <div class="content">
+             <p>Swimming at the beach can be tricky. Every beach has its own unique profile and hazards that you may need to look out for. Therefore, in order to have a hassle free and fabulous time at the beach, we have compiled some beach safety information. We hope that this helps you to be more aware of the possible dangers out at sea as well as how to avoid them.</p>
+			<br>
+			<ul>
+				<b><p style="text-decoration: underline">Safety Tips</p></b>
+          <li>Always swim between the Red and Yellow (swim here) flags, where the area is closely supervised by our Beach Patrol Officers.</li>
+				<li>Never swim under the influence of alcohol/drugs.</li>
+					<li>Never swim under the influence of alcohol/drugs.</li>
+					<li>Children are to be supervised by an adult at all times.</li>
+					<li>Always swim with a Buddy.</li>
+					<li>Never swim under the influence of alcohol/drugs.</li>
+					<li>Never swim under the influence of alcohol/drugs.</li><br>
+
+			
+			<b><p style="text-decoration: underline">Hazards</p></b>
+			
+			<b><p style="text-decoration: underline">Drop-off Point</p></b>
+			
+			<p>Most people who need rescuing at the beach have been caught off guard at the drop-off point.<br>
+			Due to the underwater current and tidal changes, the bottom of the seabed moves and changes. These constant movements of the sand create a drop-off point.
+			</p>
+
+			<b><p style="text-decoration: underline">Protect Yourself</p></b>
+			
+			<li>Always swim between the Red and Yellow flags. The red and yellow flags symbolize an area that is recommended for swimming. Furthermore, our Beach Patrol Officers will be looking out for your safety here.</li>
+			<li>If caught at the drop off point, don’t panic. Lunge towards shore. In most cases, you are only a step away from safety. Or else, raise your hand up and shout for help to attract attention.</li>
+			<li>If someone else is in trouble, throw a lifebuoy that you can find along the beaches and alert the Beach Patrol Officers.</li><br>
+
+			<b><p style="text-decoration: underline">Rocks</p></b>
+			
+			<p>The rock bunds are very beautiful man-made creations to look at. However, they are only nice to see but not to touch. Sharp barnacles, algae and seashells grow on the rocks, which may cause you to slip or get injured when you climb onto them.<br>
+			The rock bund areas are where marine creatures build their homes too. Therefore, to avoid being stung by poisonous marine creatures, do not swim near the rock areas.
+			</p>
+			<b><p style="text-decoration: underline">Protect Yourself</p></b>
+			
+			<li>Swim at designated Red and Yellow flag area</li>
+			<li>Read and obey safety signs</li>
+			<li>Enter the water slowly and shuffle your feet in front of you. This gives the marine creatures time to move away</li><br>
+
+			
+			<b><p style="text-decoration: underline">Marine Creatures</p></b>
+			
+			<p>Funzone is home to several marine creatures. They are all a part of the natural eco system that beautifies the underwater world. However, several of these may be dangerous. The most common of these dangerous creatures are the jellyfish and stonefish.
+			</p>
+
+			<b><p style="text-decoration: underline">Jellyfish</p></b>
+			<p>
+			Jellyfish are bell-shaped sea creatures and can be transparent or partially transparent. They have long tentacles and if the jellyfish's tentacles brush against your skin, it will release poison or venom.</p>
+			
+			<b><p style="text-decoration: underline">Protect Yourself</p></b>
+			
+			<li>If you spot them in the water, stay clear</li>
+			<li>Immediately inform any Beach Patrol Officers</li>
+			<li>Do not touch or pick up any jellyfish washed up onto shore. They may still sting you.</li><br>
+
+			
+			<b><p style="text-decoration: underline">Signs and Symptoms of Sting</p></b>
+			
+			<li>Burning sensation, followed by appearance of a red welt on skin</li>
+			<li>Varying from case to case, some victims may experience non-localized allergic reactions, such as difficulty in breathing and itching</li><br>
+
+			
+			<b><p style="text-decoration: underline">First Aid if Stung</p></b>
+			
+			<li>Avoid touching the wound</li>
+			<li>Alert any Beach Patrol Officers immediately</li>
+			<li>Rinse with seawater; avoid fresh water</li>
+			<li>Pour vinegar on area stung</li>
+			<li>The Beach Patrol Officers will perform basic first aid procedures and recommend further medical attention if needed.</li><br>
+
+			<b><p style="text-decoration: underline">Stonefish</p></b>
+			<p>
+				The stonefish looks like a stone or a rock. They have 13 spikes on their back that releases poison if you step on it.
+			</p><br>
+
+			<b><p style="text-decoration: underline">Protect Yourself</p></b>
+			<li>When wading in shallow water or at low tide, shuffle one foot in front of the other to disturb the sand or shoreline. This gives the stonefish time to move away.</li>
+			<li>Stay away from the rock bunds</li>
+			<li>Do not touch or pick up objects that resemble a stone</li>
+			<li>Immediately inform any Beach Patrol Officers if you think you have spotted one</li><br>
+
+			<b><p style="text-decoration: underline">Signs and Symptoms of Sting</p></b>
+			<li>Immediate pain and swelling with blue and black punctured wound</li>
+			<li>Other possible symptoms: muscle weakness, nausea, vomiting, numbness etc.</li>
+			<li>Severity of symptoms varies from case to case</li><br>
+			
+				<b><p style="text-decoration: underline">First Aid if Stung</p></b>
+			<li>Alert any Beach Patrol Officers immediately</li>
+			<li>Do not attempt to restrict blood circulation around the wound</li>
+			<li>The Beach Patrol Officers will perform basic first aid procedures and recommend further medical attention if needed.</li>
+		
+			</ul>
+        </div>
+      </li>
+      <li class="extend"><h5>Frequently Asked Questions</h5>
+        <div class="content">
+       <ul><br>
+
+		   <p><b>What age can go on HydroDash?</b></p>
+				<p>HydroDash is suitable for a wide variety of ages from as young as 5 years. Good flexibility and fitness is recommended.<br>
+				Ages 5 to 6 are welcome to use the park but MUST be accompanied by their parent or guardian. There is a section of the park (Zone 1) exclusively designed for their use. The parent or guardian is responsible for the safety of their children and must ensure their children are under the supervision of an adult at all times.<br>
+				Children under 5 years old or below 1.0 metre are not permitted on HydroDash.
+				</p>
+				 <p><b>Is there age/height restriction?</b></p>
+				<p>
+					Participants will only be permitted on the course if they are able to correctly wear the provided buoyancy aid and meet the following height requirement:<br>
+					Zone 1: 5 to 6 years old, at least 1.0 metre or taller and supervised by accompanied adult<br>
+					Zone 2 – 4: 7 years old & above at least 1.1 metre or taller
+				</p>
+
+				<p><b>Do I need to sign a Rider Agreement?</b></p>
+				<p>
+				No, as all participants must have read our safety rules and agree to them before being allowed onto HydroDash.<br>
+					These are available on site at the ticket booth and on HydroDash’s website.				</p>
+				<p><b>How do I redeem the tickets purchased from Sentosa Store?</b></p>
+				<p>
+					To secure your slots, guests are encouraged to email HydroDash athydrodash@palawan.com.sg with your preferred dates & times of visit, and HydroDash will get back to you within 48 hours. Please visit the park only after you have received a confirmation of your reservation from HydroDash.
+					<br>
+					Please bring along the confirmation email (print or softcopy) of your advanced reservation together with your valid Sentosa issued ticket for verification and entry 45 minutes before session start time.<br>
+					Participants should arrive ahead of time for their session to fully utilise the session access. All participants need to be on the beach dressed and ready upon the session start time. Full safety briefing will be conducted at the top of the hour. All participants must attend the full safety briefing before entering HydroDash. Should you arrive when a safety briefing has commenced, please wait for our staff to complete the session and you will be briefed separately.
+				</p>
+				<p><b>What types of payment do you accept?</b></p>
+				<p>All major credit / debit cards (VISA, MasterCard, China Union Pay, JCB) or Cash.</p>
+				<p><b>What should I wear?</b></p>
+				<p>
+				Proper swimming attire (such as swimsuits, rash vests, broad shorts) is required. All swimming attire should be free of zippers, rivets, buttons or other hard objects. No jeans or traditional attire are allowed. Please remove watch, jewelry or other sharp objects before entering the park.</p>
+				<b><p>
+				Do I need to wear a buoyancy aid?</p></b>
+				<p>Yes, a buoyancy aid will be fitted by our staff and will need to be worn at all times.<br>
+					Customers should arrive on time of their session to fully utilise the two-hours access. All participants need to be on the beach dressed and ready upon the session start time. All participants must attend the full safety briefing before entering HydroDash. Should you arrive when a safety briefing has commenced, please wait for our staff to complete the session and you will be briefed separately.
+				</p>
+				<b><p>
+				Are there toilets and/or changing rooms/shower facilities near HydroDash?</p></b>
+				<p>The nearest amenities are a short 2 minutes walk from the ticket booth.</p>
+				<p><b>Is there anywhere to store valuables?</b></p>
+				<p>You are responsible for your own possessions, and we would strongly recommend that you use the locker facility at the restroom 2 minutes walk from the ticket booth.</p>
+					<b><p>
+						What if it rains during my session?</p></b>
+				<p>You can still take part in the rain, as you are getting wet anyway! HydroDash is just as much fun in the rain!<br>
+					In the event of lightning warning, play will be temporary suspended. Once lightning warning is lifted, participants can resume the session and we will extend the session end time to ensure you get your purchased hour(s) of play! Alternatively, you may consider purchasing the ticket when you arrive onto Funzone.
+						</p>
+						<b><p>
+						What if I arrive with less people, after I have paid?</p></b>
+			<p>Once you book and pay for a certain number of places on HydroDash, your places are allocated to you and therefore cannot be refunded if you arrive with less. It is advisable that you ensure that you know exactly what numbers you have before booking and paying for your slot.
+			</p>
+			<b><p>What if I am late?</p></b>
+				<p>If you are running late, it is unlikely that we will be able to extend your session, so please allow plenty of time for your journey! We recommend that you arrive AT LEAST 30 minutes prior to your session so that you have plenty of time to get kitted out for your awesome session! You will need time to change, be fitted with a buoyancy aid and attend the compulsory SAFETY BRIEFING prior to your session. So please don't arrive late, as there are no refunds, and we would hate to see you upset!</p>
+					<b><p>What about spectators?</p></b>
+				<p>Spectators are welcome to watch from the shore.</p>
+				<b><p>Can I buy food and drinks?</p></b>
+				<p>
+					We have beverages and light snacks available on site. Alternatively, there are several dining options such as Good Old Days, LiHo Tea, Mary Brown, Old Chang Kee, The Coffee Bean & Tea Leaf, etc. within easy reach at Beach Station.
+			</p>
+			<b><p>Can we bring our own food and drinks?</p></b>
+				<p>
+				Yes, you are free to bring your own food and beverage and enjoy Palawan Beach. We would appreciate if everyone could help keep the Palawan Beach area clean for the enjoyment of all beachgoers.</p>
+			
+				<b><p>Can we bring our own alcohol?</p></b>
+			<p>No alcohol consumption may take place before or while participating on HydroDash. We reserve the right to refuse entry if a person is drunk and/or disorderly.
+			</p>
+			<b><p>Is the water safe to swim in?</p></b>
+			<p>The water quality at Funzone is monitored and checked regularly by the National Environment Agency.
+			</p>
+			<b><p>Can I bring my camera or selfie stick or Go-Pro while on HydroDash?</p></b>
+			<p>Whilst we would love for you to capture images of your fun, unfortunately, we are not able to allow items onto HydroDash which may damage the equipment.</p>
+				
+				<b><p>Who is not allowed on HydroDash?</p></b>
+			<p>Do not enter and participate in the Course if you are unable to swim or have any medical conditions that prevent you from physically demanding activities, or if you have not been physically active for some time. Pregnant women are strictly prohibited from entering the Course for their own safety.<br>
+			Pre-existing injuries may pose risk aggravation. We cannot be held responsible for any aggravation of existing injury. Please ensure to read the Rider Agreement.
+			</p>
+			
+			</ul>
+        </div>
+      </li>
+      
+    <li class="extend"><h5>Getting here</h5>
+      <div class="content">
+              <ul>
+        <li>By Public Bus: Board RWS 8 and alight at RWS 8 bus stop outside the Forum, Sentosa
+        OR Board Bus 123 and alight at Resorts World Sentosa</li>
+        <li>By Intra-Island Bus: Board Sentosa Bus A or C and alight at Resorts World Sentosa (Basement 1)</li>
+        <li>By Foot: Take a stroll down Sentosa Boardwalk to Resorts World Sentosa</li>
+        <li><p><b>Nearest Car Park</b></p></li>
+        <li>Resorts World Basement Car Park</li>
+      </ul>
+      </div>
+    </li>
+    <li class="extend"><h5>Contact Us</h5>
+      <div class="content">
+        <p>Address</p>
+        <p>Website</p>
+        <p>Gmail</p>
+        <p>Phone</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+    <!------------------------------- Price Form END ------------------------------>
+
+  </div>
+   
+  <!-- Footer -->
+<footer class="pageFooter">
+
+  <!-- Footer Links -->
+
+  <div class="footer-container">
+
+        <!-- Content -->
+        <div class="footerPages">
+        <h5 class="text-uppercase mb-4 txt-s">ABOUT US</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ABOUT-US.html">ABOUT US</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="CONTACT-US.html">CONTACT US</a></p>
+       </li>
+        <li>
+        <p><a class="btn footer-link"href="CAREER.html">CAREER</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="FAQ.html">FAQ</a></p>
+       </li>
+       
+       </ul>
+     </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">PLAY YOUR VISIT</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="PRICING-RENTALS.html">PRICING AND RENTALS</a></p>
+          </li>
+       <li>
+        <p><a class="btn footer-link"href="HOW-TO-GET-THERE.html">HOW TO GET HERE</a></p>
+       </li>
+       <li>
+        <p><a class="btn footer-link"href="PARK-RULES.html">PARK RULES</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+     <div class="footerPages">
+
+        <!-- Links -->
+        <h5 class="text-uppercase mb-4 txt-s">LEGAL</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+            <a class="btn footer-link"href="ONLINE-TICKING-POLICY.html">ONLINE TICKET POLICY </a></p>
+          </li>
+       
+       <li>
+        <p><a class="btn footer-link"href="PRIVACY-POLICY.html">PRIVACY POLICY</a></p>
+       </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+<div class="footerPages footer-icons">
+        <!-- Social buttons -->
+        <!-- Facebook -->
+               <h5 class="text-uppercase txt-s">FOLLOW</h5>
+        <span class="icon-container">
+        <a href="https://www.facebook.com" type="button" class="btn-floating btn-fb socialIcon">
+          <i class="fab fa-facebook iconTrans"></i>
+        </a>
+      </span>
+
+       <span class="icon-container">
+        <!-- Twitter -->
+        <a href="https://www.twitter.com"type="button" class="btn-floating btn-tw socialIcon">
+          <i class="fab fa-twitter iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Google +-->
+        <a href="https://www.instagram.com"type="button" class="btn-floating btn-gplus socialIcon">
+          <i class="fab fa-instagram iconTrans"></i>
+        </a>
+        </span>
+         <span class="icon-container">
+        <!-- Dribbble -->
+        <a href="https://www.youtube.com"type="button" class="btn-floating btn-dribbble socialIcon">
+          <i class="fab fa-youtube iconTrans"></i>
+        </a>
+        </span>
+
+    </div>
+<div class="footerPages">
+
+     <div class="myNote">
+
+        <!-- Links -->
+        <h5>NOTICE</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p class="txt-1">
+              Management reserves the right to change the operation hours, close any rides or attractions, restrict the number of visitors, cancel or amend any activity without prior notice.
+            </p>
+          </li>
+       <li>
+        <p class="txt-1">
+        Theme park tel: +44 5639 0011
+Fax: +603 5639 0022
+Email: ask@funzone.com.my</p>
+       </li>
+       <li>
+        <p class="txt-1">
+        Open Wed – Mon: 10:00am till 6:00pm</p>
+       </li>
+        <li>
+        <p class="txt-1">
+        Closed every Friday, except on Country's Public holidays</p>
+       </li>
+        </ul>
+
+      </div>
+    </div>
+    </div>
+    <!-- Grid row -->
+
+  </div>
+</div>
+</div>
+
+  <!-- Footer Links -->
+<hr class="clearfix w-100">
+  <!-- Copyright -->
+  <div class="copyRight"><p>Copyright © FUNZONE 2022.ALL RIGHT RECERVED.</p>
+   <div class="paymentMethod">
+    <img src="assets/images/ICONS/Visa-icon.png">
+    <img src="assets/images/ICONS/Master-Card-Blue-icon.png">
+    <img src="assets/images/ICONS/Paypal-icon.png">
+     <img src="assets/images/ICONS/American-Express-icon.png">
+     <img src="assets/images/ICONS/Discover-icon.png">
+   </div>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+<script>
+    var coll = document.getElementsByClassName("extend");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        var content = this;
+        if (content.style.height === "48px") {
+          content.style.height = "fit-content";
+          this.classList.add("activated");
+          this.previousElementSibling.classList.remove("activated");
+          this.nextElementSibling.classList.remove("activated");
+          this.nextElementSibling.style.height = "48px";
+          this.previousElementSibling.style.height = "48px";
+        } else {
+          content.style.height = "48px";
+        }
+      });
+    }
+  </script>
+
+<script src="assets/js/my-script.js"></script>
+</body>
+</html>
