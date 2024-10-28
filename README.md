@@ -2,7 +2,7 @@
 **Overview**
 "Funzone Amusement Park" is a dynamic website designed for selling tickets online and showcasing the park's exciting features. Built using HTML, CSS, and JavaScript, this platform provides users with an intuitive and engaging experience. The site includes a visually appealing slider created with jQuery to highlight key attractions, alongside a shopping cart system that utilizes local storage for seamless ticket management.
 
-**Vie Live Demo:** https://amusementparkfunzone.netlify.app/
+**View Live Demo:** https://amusementparkfunzone.netlify.app/
 
 ## Key Features
 
